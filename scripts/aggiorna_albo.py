@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """
-Legge l'Albo Pretorio del Comune di Palestrina e aggiorna:
-  docs/data/atti.json              -> dati per il calendario del sito
-  docs/calendario.ics              -> tutti gli atti (da aggiungere a Google Calendar)
-  docs/calendario-ordinanze.ics    -> solo le ordinanze
+Legge l'Albo Pretorio del Comune di Palestrina e aggiorna
+  docs/data/atti.enc.json  -> dati del calendario, cifrati (vedi scripts/cifratura.py)
 
-Usa solo la libreria standard di Python. Gli atti già salvati restano nello
+Richiede il segreto ALBO_CHIAVE e il pacchetto "cryptography". Gli atti già salvati restano nello
 storico anche quando escono dall'albo, così il calendario si arricchisce ogni giorno.
 
 Uso:
@@ -22,6 +20,8 @@ import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+
+from cifratura import chiave_da_ambiente, cifra_json, decifra_json
 
 BASE = "https://palestrina.trasparenza-valutazione-merito.it"
 # Pagina con l'elenco dell'albo (è quella caricata nel riquadro della pagina ufficiale).
@@ -40,6 +40,7 @@ UA = "Mozilla/5.0 (calendario albo pretorio Palestrina; aggiornamento giornalier
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 DATA_FILE = DOCS / "data" / "atti.json"
+DATA_CIFRATI = DOCS / "data" / "atti.enc.json"
 
 # Gruppi di colore (stesse chiavi usate dal sito)
 GRUPPI = [
@@ -367,13 +368,13 @@ def main():
     if not nuovi:
         sys.exit("Nessun atto letto: non aggiorno i file per non perdere i dati.")
 
+    chiave = chiave_da_ambiente()
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     archivio = {}
-    if DATA_FILE.exists():
-        try:
-            archivio = {a["id"]: a for a in json.loads(DATA_FILE.read_text(encoding="utf-8"))["atti"]}
-        except Exception:
-            archivio = {}
+    if DATA_CIFRATI.exists():
+        archivio = {a["id"]: a for a in decifra_json(json.loads(DATA_CIFRATI.read_text(encoding="utf-8")), chiave)["atti"]}
+    elif DATA_FILE.exists():                  # primo avvio: riprendo l'archivio in chiaro e poi lo elimino
+        archivio = {a["id"]: a for a in json.loads(DATA_FILE.read_text(encoding="utf-8"))["atti"]}
     oggi = datetime.now(timezone(timedelta(hours=1))).strftime("%Y-%m-%d")
     for a in nuovi:
         vecchio = archivio.get(a["id"], {})
@@ -385,16 +386,15 @@ def main():
 
     atti = sorted(archivio.values(), key=lambda a: (a["pubblicato_dal"], a["registro"]), reverse=True)
     aggiornato = datetime.now(timezone.utc).isoformat(timespec="minutes")
-    DATA_FILE.write_text(json.dumps({
+    DATA_CIFRATI.write_text(json.dumps(cifra_json({
         "aggiornato": aggiornato,
         "fonte": URL_ELENCO,
         "gruppi": [{"chiave": k, "nome": n} for k, n, _ in GRUPPI],
         "atti": atti,
-    }, ensure_ascii=False, indent=1), encoding="utf-8")
-
-    scrivi_ics(atti, DOCS / "calendario.ics", "Albo Pretorio Palestrina – tutti gli atti")
-    scrivi_ics(atti, DOCS / "calendario-ordinanze.ics", "Albo Pretorio Palestrina – ordinanze",
-               solo={"ordinanza"})
+    }, chiave)), encoding="utf-8")
+    # nessun dato in chiaro sul sito
+    for vecchio_file in (DATA_FILE, DOCS / "calendario.ics", DOCS / "calendario-ordinanze.ics"):
+        vecchio_file.unlink(missing_ok=True)
     print(f"OK ({metodo}): {len(nuovi)} atti letti oggi, {len(atti)} nell'archivio.")
 
 
