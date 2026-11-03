@@ -1,8 +1,6 @@
 # Calendario Albo Pretorio – Comune di Palestrina
 
-Autore: Luciano Salierno
-
-Un sito con un calendario che si sfoglia mese per mese e mostra gli atti dell'Albo Pretorio del Comune di Palestrina (ordinanze, delibere, determine, convocazioni, autorizzazioni, avvisi, pubblicazioni di matrimonio), ognuno con il suo colore. Toccando un giorno si apre la pagina con tutti i dettagli degli atti e il link all'atto originale con gli allegati.
+Consultazione a calendario degli atti dell'Albo Pretorio del Comune di Palestrina (ordinanze, delibere, determine, convocazioni, autorizzazioni, avvisi, pubblicazioni di matrimonio), ognuno con il suo colore. Selezionando un giorno si apre la pagina con tutti i dettagli degli atti e il link all'atto originale con gli allegati.
 
 Si aggiorna da solo tre volte al giorno, gratis, usando GitHub.
 
