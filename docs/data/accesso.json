@@ -1,0 +1,11 @@
+{
+ "v": 1,
+ "utenti": {
+  "06a6198c1bb8dfa0381740072582d06aa85231301b728ce2323c1981ab73db7e": {
+   "iterazioni": 310000,
+   "sale": "2hOCLBUXXD7X9XVagul/oA==",
+   "iv": "2mtAvMqGIH46oMeA",
+   "chiave": "oZsFSlIj5R1dJWrbrDOkfv38BdE98Adm6a8+2eG2xOwdlroW73Jceg4Jv5x6XFG0"
+  }
+ }
+}
