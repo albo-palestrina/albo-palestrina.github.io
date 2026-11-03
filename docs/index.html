@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Albo Pretorio Palestrina</title>
-<meta name="author" content="Luciano Salierno">
-<meta name="description" content="Calendario dell'Albo Pretorio del Comune di Palestrina, aggiornato ogni giorno.">
+<meta name="description" content="Consultazione a calendario degli atti pubblicati sull'Albo Pretorio online del Comune di Palestrina.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -142,6 +141,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 
 .foot { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; color: var(--muted); font-size: 13px; }
 .foot p { margin: 0; max-width: 70ch; }
+.foot .disc { flex-basis: 100%; max-width: none; font-size: 12px; }
 .note { font-size: 13px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .note i { display: inline-flex; align-items: center; gap: 6px; font-style: normal; }
 .note .k1 { width: 18px; height: 10px; border-radius: 3px; background: color-mix(in oklab, var(--accent) 22%, var(--surface)); }
@@ -173,6 +173,28 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .empty-day { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 28px; text-align: center; color: var(--muted); }
 
+/* pannello viabilità */
+.panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 14px; }
+.pcol { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.pcol h2 { margin: 0; font: 700 12px var(--f-body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; }
+.pcol h2 span { font-variant-numeric: tabular-nums; }
+.plist { display: grid; gap: 2px; max-height: 236px; overflow-y: auto; margin: 0 -6px; }
+.pr { --c: var(--c-altro); display: grid; grid-template-columns: auto auto minmax(0, 1fr); gap: 10px; align-items: start; padding: 6px; border-radius: 6px; text-decoration: none; color: var(--fg); }
+.pr:hover { background: var(--surface-2); }
+.pr .pd { color: var(--muted); padding-top: 1px; }
+.pr .sw { width: 10px; height: 10px; border-radius: 3px; background: var(--c); margin-top: 5px; }
+.pr .pt { display: grid; min-width: 0; }
+.pr .pt b { font-weight: 600; overflow-wrap: anywhere; }
+.pr .pt small { color: var(--muted); font-size: 12px; }
+.pe { margin: 0; color: var(--muted); font-size: 13px; }
+
+@media print {
+  body { background: #fff; color: #000; padding: 0; }
+  .nav, .tools, .note, .actions, .head, .foot #sub, .panel { display: none !important; }
+  .card { break-inside: avoid; border-color: #999; }
+  .card .obj, .facts dt { color: #333; }
+}
+
 @media (max-width: 760px) {
   .weeks .day { min-height: 64px; padding: 4px; }
   .day .ev, .day .more { display: none; }
@@ -193,7 +215,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 <div class="wrap" id="app">
   <header class="top">
     <div class="brand">
-      <span class="eyebrow">Albo Pretorio · Comune di Palestrina</span>
+      <span class="eyebrow">Comune di Palestrina · Albo Pretorio online</span>
       <h1 id="title">Caricamento…</h1>
     </div>
     <nav class="nav" aria-label="Navigazione">
@@ -206,6 +228,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   <footer class="foot">
     <p id="upd"></p>
     <p id="sub"></p>
+    <p class="disc">Strumento di consultazione non ufficiale, aggiornato automaticamente più volte al giorno. Per ogni effetto di legge fa fede esclusivamente la pubblicazione sull'Albo Pretorio online del Comune di Palestrina.</p>
   </footer>
 </div>
 
@@ -264,8 +287,38 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   }
 
   function evHtml(a, inProgramma) {
-    const testo = inProgramma ? `In programma: ${a.titolo}` : a.titolo;
+    const testo = inProgramma ? `${a.gruppo === "ordinanza" ? "In vigore" : "In programma"}: ${a.titolo}` : a.titolo;
     return `<div class="ev${inProgramma ? " prog" : ""}" style="--c:var(--c-${a.gruppo})" title="${esc(a.tipo + " – " + a.oggetto)}"><span class="sw"></span><span>${esc(testo)}</span></div>`;
+  }
+
+  function rigaPannello(a, giorno, etichetta) {
+    const d = parse(giorno);
+    return `<a class="pr" href="#giorno-${giorno}" style="--c:var(--c-${a.gruppo})">
+      <span class="pd mono">${pad(d.getDate())}/${pad(d.getMonth() + 1)}</span>
+      <span class="sw"></span>
+      <span class="pt"><b>${esc(a.titolo)}</b><small>${esc(etichetta)}</small></span></a>`;
+  }
+
+  function pannello() {
+    const k0 = key(oggi());
+    const lim = new Date(oggi()); lim.setDate(lim.getDate() + 14);
+    const k14 = key(lim);
+    const prossimi = [];
+    for (const a of DATA.atti) for (const g of a.date_citate || []) if (g >= k0 && g <= k14) prossimi.push([g, a]);
+    prossimi.sort((x, y) => x[0].localeCompare(y[0]) || ORDINE.indexOf(x[1].gruppo) - ORDINE.indexOf(y[1].gruppo));
+    const vigenti = DATA.atti.filter((a) => a.gruppo === "ordinanza" && a.pubblicato_al >= k0)
+      .sort((x, y) => y.pubblicato_dal.localeCompare(x.pubblicato_dal));
+    const vuoto = (t) => `<p class="pe">${t}</p>`;
+    return `<section class="panel" aria-label="Viabilità e ordinanze">
+      <div class="pcol">
+        <h2>Date in programma · prossimi 14 giorni <span>${prossimi.length}</span></h2>
+        <div class="plist">${prossimi.length ? prossimi.map(([g, a]) => rigaPannello(a, g, `${a.tipo} · reg. ${a.registro}`)).join("") : vuoto("Nessuna data indicata negli atti per i prossimi 14 giorni.")}</div>
+      </div>
+      <div class="pcol">
+        <h2>Ordinanze in pubblicazione <span>${vigenti.length}</span></h2>
+        <div class="plist">${vigenti.length ? vigenti.map((a) => rigaPannello(a, a.pubblicato_dal, `Reg. ${a.registro} · all'albo fino al ${fmt(a.pubblicato_al)}`)).join("") : vuoto("Nessuna ordinanza attualmente in pubblicazione.")}</div>
+      </div>
+    </section>`;
   }
 
   function vistaMese() {
@@ -302,11 +355,12 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 
     $("#view").innerHTML = `
       <div style="display:grid;gap:14px">
+        ${pannello()}
         <div class="tools">
           <div class="legend" role="group" aria-label="Tipi di atto: tocca per mostrare o nascondere">${legenda()}</div>
-          <label class="search"><input id="q" type="search" placeholder="Cerca: via, ufficio, parola…" value="${esc(cerca)}" aria-label="Cerca negli atti"></label>
+          <label class="search"><input id="q" type="search" placeholder="Cerca per via, ufficio, oggetto, n. registro…" value="${esc(cerca)}" aria-label="Cerca negli atti"></label>
         </div>
-        <div class="note"><i><span class="k1"></span>pubblicato all'albo quel giorno</i><i><span class="k2"></span>evento in programma quel giorno (lavori, chiusure, sedute)</i><span>Tocca un giorno per tutti i dettagli.</span></div>
+        <div class="note"><i><span class="k1"></span>Atto pubblicato in quella data</i><i><span class="k2"></span>Data di efficacia indicata nell'atto (lavori, chiusure, manifestazioni, sedute)</i><span>Selezionare un giorno per il dettaglio completo.</span></div>
         <div class="month" role="grid" aria-label="Calendario del mese">
           <div class="dow">${GIORNI.map((g) => `<div>${g}</div>`).join("")}</div>
           <div class="weeks">${celle}</div>
@@ -363,7 +417,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
       ["Spesa prevista", a.spesa ? a.spesa.toLocaleString("it-IT", { style: "currency", currency: "EUR" }) : ""],
     ].filter(([, v]) => v);
     return `<article class="card" style="--c:var(--c-${a.gruppo})">
-      <span class="tag"><span class="sw"></span>${esc(a.tipo)}${inProgramma ? " · in programma oggi" : ""}</span>
+      <span class="tag"><span class="sw"></span>${esc(a.tipo)}${inProgramma ? " · efficace in questa data" : ""}</span>
       <h2>${esc(a.titolo)}</h2>
       ${a.oggetto && a.oggetto !== a.titolo ? `<p class="obj">${esc(a.oggetto)}</p>` : ""}
       <dl class="facts">${righe.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>
@@ -391,7 +445,8 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 
     $("#view").innerHTML = `<div class="dayview">
       <div class="head">
-        <a class="btn" href="#mese-${k.slice(0, 7)}">‹ Torna al calendario</a>
+        <div class="nav" style="display:flex"><a class="btn" href="#mese-${k.slice(0, 7)}">‹ Torna al calendario</a>
+        ${/github\.io$/.test(location.hostname) ? `<button class="btn" type="button" onclick="window.print()">Stampa</button>` : ""}</div>
         <div class="nav" style="display:flex">
           <a class="btn" href="#giorno-${key(prima)}" aria-label="Giorno precedente">‹ ${prima.getDate()} ${MESI[prima.getMonth()].slice(0, 3)}</a>
           <a class="btn" href="#giorno-${key(dopo)}" aria-label="Giorno successivo">${dopo.getDate()} ${MESI[dopo.getMonth()].slice(0, 3)} ›</a>
@@ -399,8 +454,8 @@ h1 .yr { color: var(--muted); font-weight: 500; }
       </div>
       <h1>${esc(titolo)}</h1>
       ${tot ? `<div class="summary">${riepilogo}</div>` : ""}
-      ${pr.length ? `<h2 class="section-title">In programma oggi (${pr.length})</h2>${pr.map((a) => cardHtml(a, k, true)).join("")}` : ""}
-      ${pu.length ? `<h2 class="section-title">Pubblicati all'albo oggi (${pu.length})</h2>${pu.map((a) => cardHtml(a, k, false)).join("")}` : ""}
+      ${pr.length ? `<h2 class="section-title">Atti con efficacia in questa data (${pr.length})</h2>${pr.map((a) => cardHtml(a, k, true)).join("")}` : ""}
+      ${pu.length ? `<h2 class="section-title">Atti pubblicati in questa data (${pu.length})</h2>${pu.map((a) => cardHtml(a, k, false)).join("")}` : ""}
       ${tot ? "" : `<div class="empty-day">Nessun atto per questo giorno${cerca || attivi.size < ORDINE.length ? " con i filtri attivi" : ""}.</div>`}
     </div>`;
     window.scrollTo(0, 0);
