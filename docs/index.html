@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Albo Pretorio Palestrina</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='26' height='24' rx='4' fill='%2323466e'/%3E%3Crect x='3' y='5' width='26' height='7' rx='3' fill='%23c2410c'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%23fff'/%3E%3Crect x='14' y='16' width='4' height='4' fill='%23fff'/%3E%3Crect x='20' y='16' width='4' height='4' fill='%23fff'/%3E%3Crect x='8' y='22' width='4' height='4' fill='%23fff'/%3E%3Crect x='14' y='22' width='4' height='4' fill='%23fff'/%3E%3C/svg%3E">
 <meta name="description" content="Consultazione a calendario degli atti pubblicati sull'Albo Pretorio online del Comune di Palestrina.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -188,6 +190,20 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 .pr .pt small { color: var(--muted); font-size: 12px; }
 .pe { margin: 0; color: var(--muted); font-size: 13px; }
 
+/* accesso */
+.login { min-height: 80vh; display: grid; place-content: center; justify-items: center; gap: 14px; }
+.login-card { width: min(100%, 400px); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px 26px; display: grid; gap: 8px; }
+.login-card h1 { font-size: 30px; margin-bottom: 2px; }
+.login-sub { margin: 0 0 10px; color: var(--muted); }
+.login-card label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.login-card input:not([type="checkbox"]) { border: 1px solid var(--line); background: var(--bg); border-radius: var(--r); padding: 10px 12px; font-size: 16px; width: 100%; }
+.login-card .check { display: flex; gap: 8px; align-items: center; text-transform: none; letter-spacing: 0; font-weight: 500; font-size: 14px; color: var(--fg); margin-top: 10px; }
+.login-card .btn.primary { justify-content: center; padding: 11px; margin-top: 10px; font-size: 15px; }
+.login-card .btn:disabled { opacity: .7; cursor: progress; }
+.err { margin: 4px 0 0; min-height: 1.2em; color: var(--c-ordinanza); font-weight: 600; font-size: 14px; }
+.login-foot { max-width: 400px; text-align: center; color: var(--muted); font-size: 12px; margin: 0; }
+.topright { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
 @media print {
   body { background: #fff; color: #000; padding: 0; }
   .nav, .tools, .note, .actions, .head, .foot #sub, .panel { display: none !important; }
@@ -212,17 +228,36 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 </style>
 </head>
 <body>
-<div class="wrap" id="app">
+<div class="login" id="login" hidden>
+  <form class="login-card" id="form-login">
+    <span class="eyebrow">Comune di Palestrina · Albo Pretorio online</span>
+    <h1>Calendario degli atti</h1>
+    <p class="login-sub">Accesso riservato. Inserire le credenziali ricevute.</p>
+    <label for="utente">Utente</label>
+    <input id="utente" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <label class="check"><input id="ricorda" type="checkbox" checked> Ricorda l'accesso su questo dispositivo</label>
+    <button class="btn primary" id="accedi" type="submit">Accedi</button>
+    <p class="err" id="err" role="alert"></p>
+  </form>
+  <p class="login-foot">Strumento di consultazione non ufficiale. Per ogni effetto di legge fa fede la pubblicazione sull'Albo Pretorio online del Comune di Palestrina.</p>
+</div>
+
+<div class="wrap" id="app" hidden>
   <header class="top">
     <div class="brand">
       <span class="eyebrow">Comune di Palestrina · Albo Pretorio online</span>
       <h1 id="title">Caricamento…</h1>
     </div>
+    <div class="topright">
     <nav class="nav" aria-label="Navigazione">
       <button class="btn icon" id="prev" aria-label="Mese precedente">‹</button>
       <button class="btn" id="oggi">Oggi</button>
       <button class="btn icon" id="next" aria-label="Mese successivo">›</button>
     </nav>
+    <button class="btn" id="esci" type="button">Esci</button>
+    </div>
   </header>
   <main id="view"></main>
   <footer class="foot">
@@ -246,6 +281,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   let attivi = new Set(ORDINE);
   let cerca = "";
   let mese = null;          // Date al primo del mese visualizzato
+  let pronto = false;       // dati sbloccati e caricati
 
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -463,6 +499,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 
   /* ---------------- instradamento ---------------- */
   function route() {
+    if (!pronto) return;
     const h = location.hash.slice(1);
     let m;
     if ((m = h.match(/^giorno-(\d{4}-\d{2}-\d{2})$/))) return vistaGiorno(m[1]);
@@ -491,23 +528,92 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   function piedi() {
     const agg = DATA.aggiornato ? new Date(DATA.aggiornato) : null;
     $("#upd").innerHTML = `${DATA.atti.length} atti in archivio${agg ? ` · ultimo aggiornamento ${agg.toLocaleDateString("it-IT", { day: "numeric", month: "long" })} alle ${agg.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}` : ""} · fonte: <a href="${esc(DATA.fonte || "#")}" target="_blank" rel="noopener">Albo Pretorio del Comune di Palestrina</a>`;
-    if (/github\.io$/.test(location.hostname)) {
-      const base = location.href.replace(/[#?].*$/, "").replace(/index\.html$/, "");
-      const ics = base + "calendario.ics";
-      const gcal = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(ics.replace(/^https:/, "webcal:"));
-      $("#sub").innerHTML = `<a href="${gcal}" target="_blank" rel="noopener">Aggiungi tutto a Google Calendar ↗</a> · <a href="${base}calendario-ordinanze.ics">solo ordinanze (.ics)</a>`;
-    }
   }
 
   try { const f = JSON.parse(store.get("albo-filtri")); if (Array.isArray(f) && f.length) attivi = new Set(f); } catch {}
 
-  fetch("data/atti.json", { cache: "no-cache" })
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((j) => { DATA = j; indicizza(); piedi(); route(); })
-    .catch(() => {
-      $("#title").textContent = "Dati non disponibili";
-      $("#view").innerHTML = `<div class="empty-day">Non riesco a leggere il file degli atti (data/atti.json). Riprova tra qualche minuto: l'aggiornamento potrebbe essere in corso.</div>`;
-    });
+  /* ---------------- accesso e dati cifrati ---------------- */
+  const CHIAVE = "albo-accesso";
+  const enc = new TextEncoder();
+  const d64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+  const b64 = (u) => btoa(String.fromCharCode(...u));
+  const leggiJson = (url) => fetch(url, { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+
+  async function sha256hex(t) {
+    const h = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(t)));
+    return [...h].map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  async function sbloccaChiave(utente, password) {
+    const accessi = await leggiJson("data/accesso.json");
+    const u = utente.trim().toLowerCase();
+    const voce = accessi.utenti[await sha256hex(u)];
+    if (!voce) return null;
+    const base = await crypto.subtle.importKey("raw", enc.encode(u + "\n" + password), "PBKDF2", false, ["deriveKey"]);
+    const kek = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: d64(voce.sale), iterations: voce.iterazioni, hash: "SHA-256" },
+      base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+    try { return new Uint8Array(await crypto.subtle.decrypt({ name: "AES-GCM", iv: d64(voce.iv) }, kek, d64(voce.chiave))); }
+    catch { return null; }
+  }
+
+  async function caricaDati(raw) {
+    const scatola = await leggiJson("data/atti.enc.json");
+    const k = await crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]);
+    const gz = await crypto.subtle.decrypt({ name: "AES-GCM", iv: d64(scatola.iv) }, k, d64(scatola.dati));
+    const testo = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+    return JSON.parse(testo);
+  }
+
+  const chiaveSalvata = () => { try { return sessionStorage.getItem(CHIAVE) || localStorage.getItem(CHIAVE); } catch { return null; } };
+  const salvaChiave = (raw, ricorda) => { try { (ricorda ? localStorage : sessionStorage).setItem(CHIAVE, b64(raw)); } catch {} };
+  const dimentica = () => { try { sessionStorage.removeItem(CHIAVE); localStorage.removeItem(CHIAVE); } catch {} };
+
+  async function avvia(raw) {
+    DATA = await caricaDati(raw);
+    indicizza(); piedi();
+    pronto = true;
+    $("#login").hidden = true;
+    $("#app").hidden = false;
+    route();
+  }
+
+  function mostraLogin(messaggio) {
+    pronto = false;
+    $("#app").hidden = true;
+    $("#login").hidden = false;
+    $("#err").textContent = messaggio || "";
+    document.title = "Accesso · Albo Pretorio Palestrina";
+    $("#utente").focus();
+  }
+
+  $("#form-login").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = $("#accedi");
+    btn.disabled = true; btn.textContent = "Verifica in corso…"; $("#err").textContent = "";
+    try {
+      const raw = await sbloccaChiave($("#utente").value, $("#password").value);
+      if (!raw) { $("#err").textContent = "Utente o password non corretti."; return; }
+      salvaChiave(raw, $("#ricorda").checked);
+      $("#password").value = "";
+      await avvia(raw);
+    } catch {
+      $("#err").textContent = "Impossibile caricare i dati. Verificare la connessione e riprovare.";
+    } finally {
+      btn.disabled = false; btn.textContent = "Accedi";
+    }
+  });
+
+  $("#esci").addEventListener("click", () => {
+    dimentica();
+    DATA = { atti: [], gruppi: [] };
+    $("#view").innerHTML = "";
+    mostraLogin();
+  });
+
+  const salvata = chiaveSalvata();
+  if (salvata) avvia(d64(salvata)).catch(() => { dimentica(); mostraLogin("Sessione scaduta: accedere di nuovo."); });
+  else mostraLogin();
 })();
 </script>
 
