@@ -18,16 +18,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - name: Scarica l'albo e rigenera calendario
-        run: python3 scripts/aggiorna_albo.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepara l'ambiente
+        run: python -m pip install --quiet cryptography
+
+      - name: Scarica l'albo e rigenera i dati cifrati
+        env:
+          ALBO_CHIAVE: ${{ secrets.ALBO_CHIAVE }}
+        run: python scripts/aggiorna_albo.py
 
       - name: Salva i dati aggiornati
         run: |
           git config user.name "Aggiornamento albo"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs
+          git add -A docs
           if git diff --cached --quiet; then
             echo "Nessuna novità."
           else
