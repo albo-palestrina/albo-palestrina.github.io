@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//albo-palestrina//calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Albo Pretorio Palestrina – ordinanze
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:5755737-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Ordinanza: Viabilità modificata: Via Pedemontana (posizionamento c
+ assone scarrabile per rifiuti ingombranti)
+DESCRIPTION:Ordinanza n. 230/2026 (registro albo 2139/2026)\nPosizionamento
+  cassone scarrabile per rifiuti ingombranti - data 4/11/2026\; Nuova disci
+ plina temporanea della viabilita' in via Pedemontana\nUfficio: Settore I: 
+ STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 202
+ 6-11-02 al 2026-11-17\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755737
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755737
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755737-g2026-11-04@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:In programma (ordinanza): Viabilità modificata: Via Pedemontana (p
+ osizionamento cassone scarrabile per rifiuti ingombranti)
+DESCRIPTION:Ordinanza n. 230/2026 (registro albo 2139/2026)\nPosizionamento
+  cassone scarrabile per rifiuti ingombranti - data 4/11/2026\; Nuova disci
+ plina temporanea della viabilita' in via Pedemontana\nUfficio: Settore I: 
+ STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 202
+ 6-11-02 al 2026-11-17\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755737
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755737
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753551-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Piazza Regina margherita (lavori 
+ di manutenzione straordinaria del manto stradale)
+DESCRIPTION:Ordinanza n. 226/2026 (registro albo 2136/2026)\nLavori di manu
+ tenzione straordinaria del manto stradale\; Nuova disciplina temporanea de
+ lla viabilita' in piazza Regina margherita\nUfficio: Settore I: STAFF\, SE
+ RVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al
+  2026-11-14\nAtto e documenti: https://palestrina.trasparenza-valutazione-
+ merito.it/web/trasparenza/papca-ap/-/papca/display/5753551
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753551
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753550-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Centro storico e nella frazione d
+ i Carchitti (commemorazione giorno dell'unita' nazionale e gornata delle f
+ orze armate)
+DESCRIPTION:Ordinanza n. 229/2026 (registro albo 2135/2026)\nCommemorazione
+  giorno dell'unita' nazionale e gornata delle forze armate - data 4/11/202
+ 6\; Nuova disciplina temporanea della viabilita' nel centro storico e nell
+ a frazione di Carchitti\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIV
+ I E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e
+  documenti: https://palestrina.trasparenza-valutazione-merito.it/web/trasp
+ arenza/papca-ap/-/papca/display/5753550
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753550
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753550-g2026-11-04@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:In programma (ordinanza): Viabilità modificata: Centro storico e n
+ ella frazione di Carchitti (commemorazione giorno dell'unita' nazionale e 
+ gornata delle forze armate)
+DESCRIPTION:Ordinanza n. 229/2026 (registro albo 2135/2026)\nCommemorazione
+  giorno dell'unita' nazionale e gornata delle forze armate - data 4/11/202
+ 6\; Nuova disciplina temporanea della viabilita' nel centro storico e nell
+ a frazione di Carchitti\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIV
+ I E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e
+  documenti: https://palestrina.trasparenza-valutazione-merito.it/web/trasp
+ arenza/papca-ap/-/papca/display/5753550
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753550
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753549-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Via Ignazio piersanti (lavori di 
+ ristrutturazione edilizia di un immobile residenziale)
+DESCRIPTION:Ordinanza n. 228/2026 (registro albo 2134/2026)\nLavori di rist
+ rutturazione edilizia di un immobile residenziale\; Nuova disciplina tempo
+ ranea della viabilita' in via Ignazio piersanti\nUfficio: Settore I: STAFF
+ \, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-
+ 30 al 2026-11-14\nAtto e documenti: https://palestrina.trasparenza-valutaz
+ ione-merito.it/web/trasparenza/papca-ap/-/papca/display/5753549
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753549
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753548-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Via Dante alighieri (lavori di or
+ dinaria manutenzione della copertura del fabbricato sito in via D. Alighie
+ ri n.25-26)
+DESCRIPTION:Ordinanza n. 227/2026 (registro albo 2133/2026)\nLavori di ordi
+ naria manutenzione della copertura del fabbricato sito in via D. Alighieri
+  n.25-26\; Nuova disciplina temporanea della viabilita' in via Dante aligh
+ ieri\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI
+ \nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e documenti: https:/
+ /palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/p
+ apca/display/5753548
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753548
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748561-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Ordinanza: Nuova viabilità: Istituzione e regolamentazione della c
+ ircolazione stradale sulla nuova pista ciclope-donale realizzata sul sedim
+ e della ex linea ferroviaria dismessa denominata “roma-fiuggi-alatri-fro
+ sinone”
+DESCRIPTION:Ordinanza n. 225/2026 (registro albo 2115/2026)\nIstituzione e 
+ regolamentazione della circolazione stradale sulla nuova pista ciclope-don
+ ale realizzata sul sedime della ex linea ferroviaria dismessa denominata 
+ “roma-fiuggi-alatri-frosinone”\; Nuova disciplina permanente della via
+ bilita'\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENER
+ ALI\nIn pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: http
+ s://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/
+ -/papca/display/5748561
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748561
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5737297-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Ordinanza: Viabilità modificata: Piazzale Antistante la chiesa di 
+ san francesco (festa inizio anno catechistico)
+DESCRIPTION:Ordinanza n. 224/2026 (registro albo 2055/2026)\nFesta inizio a
+ nno catechistico - data 25/10/2026\; Nuova disciplina temporanea della via
+ bilita' nel piazzale Antistante la chiesa di san francesco\nUfficio: Setto
+ re I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione d
+ al 2026-10-24 al 2026-11-08\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5737297
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5737297
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5737297-g2026-10-25@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:In programma (ordinanza): Viabilità modificata: Piazzale Antistant
+ e la chiesa di san francesco (festa inizio anno catechistico)
+DESCRIPTION:Ordinanza n. 224/2026 (registro albo 2055/2026)\nFesta inizio a
+ nno catechistico - data 25/10/2026\; Nuova disciplina temporanea della via
+ bilita' nel piazzale Antistante la chiesa di san francesco\nUfficio: Setto
+ re I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione d
+ al 2026-10-24 al 2026-11-08\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5737297
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5737297
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736365-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Ordinanza: Costituzione in giudizio per ricorso dinanzi alla corte 
+ di giustizia tributaria di secondo grado del Lazio
+DESCRIPTION:Ordinanza n. 26/2026 (registro albo 2051/2026)\nCostituzione in
+  giudizio per ricorso dinanzi alla corte di giustizia tributaria di second
+ o grado del Lazio\nUfficio: Sindaco\nIn pubblicazione dal 2026-10-23 al 20
+ 26-11-07\nAtto e documenti: https://palestrina.trasparenza-valutazione-mer
+ ito.it/web/trasparenza/papca-ap/-/papca/display/5736365
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736365
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5732503-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Ordinanza: Chisura del centro operativo comunale
+DESCRIPTION:Ordinanza n. 222/2026 (registro albo 2043/2026)\nChisura del ce
+ ntro operativo comunale\nUfficio: Settore IV: POLIZIA EDILIZIA\nIn pubblic
+ azione dal 2026-10-22 al 2026-11-06\nAtto e documenti: https://palestrina.
+ trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display
+ /5732503
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5732503
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5730233-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Ordinanza: Viabilità modificata: Via Mezzaselva (lavori di bonific
+ a della rete idrica)
+DESCRIPTION:Ordinanza n. 221/2026 (registro albo 2040/2026)\nLavori di boni
+ fica della rete idrica\; Nuova disciplina temporanea della viabilita' in v
+ ia Mezzaselva\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI
+  GENERALI\nIn pubblicazione dal 2026-10-21 al 2026-11-05\nAtto e documenti
+ : https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pap
+ ca-ap/-/papca/display/5730233
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5730233
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5728072-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Ordinanza: Attivazione del centro operativo comunale
+DESCRIPTION:Ordinanza n. 220/2026 (registro albo 2038/2026)\nAttivazione de
+ l centro operativo comunale\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTR
+ ATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-21 al 2026-11-05\nAt
+ to e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/t
+ rasparenza/papca-ap/-/papca/display/5728072
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5728072
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5726062-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Ordinanza: Viabilità modificata: Via Dei cappuccini (lavori di rif
+ acimento e manutenzione del manto stradale)
+DESCRIPTION:Ordinanza n. 219/2026 (registro albo 2036/2026)\nLavori di rifa
+ cimento e manutenzione del manto stradale\; Nuova disciplina temporanea de
+ lla viabilita' in via Dei cappuccini\nUfficio: Settore I: STAFF\, SERVIZI 
+ AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-20 al 2026-
+ 11-04\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5726062
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5726062
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

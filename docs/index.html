@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Albo Pretorio Palestrina</title>
+<meta name="author" content="Luciano Salierno">
+<meta name="description" content="Calendario dell'Albo Pretorio del Comune di Palestrina, aggiornato ogni giorno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: registro comunale in pietra — testata con mese, legenda-filtri, griglia lun→dom; vista giorno a pagina intera */
+:root {
+  --bg: #f3f4f1;
+  --surface: #ffffff;
+  --surface-2: #eceee9;
+  --line: #d8dbd3;
+  --fg: #1d221e;
+  --muted: #5d665f;
+  --accent: #23466e;
+  --accent-fg: #ffffff;
+  --today: #23466e;
+  --weekend: #e9ebe5;
+
+  --c-ordinanza: #c2410c;
+  --c-convocazione: #a16207;
+  --c-delibera: #7e3fb5;
+  --c-determina: #2f6aa8;
+  --c-autorizzazione: #2f7d4f;
+  --c-avviso: #0e7f86;
+  --c-matrimonio: #be3a78;
+  --c-altro: #6b7280;
+
+  --f-display: "Spectral", Georgia, "Times New Roman", serif;
+  --f-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141816; --surface: #1c211e; --surface-2: #232925; --line: #333b36;
+    --fg: #e7ebe6; --muted: #9aa49c; --accent: #8db4e2; --accent-fg: #0f1a26; --today: #8db4e2; --weekend: #181c1a;
+    --c-ordinanza: #f08a55; --c-convocazione: #e0b04a; --c-delibera: #c39af0; --c-determina: #7fb0e6;
+    --c-autorizzazione: #6fc492; --c-avviso: #4fc7cc; --c-matrimonio: #ee7fb2; --c-altro: #a3abb6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141816; --surface: #1c211e; --surface-2: #232925; --line: #333b36;
+  --fg: #e7ebe6; --muted: #9aa49c; --accent: #8db4e2; --accent-fg: #0f1a26; --today: #8db4e2; --weekend: #181c1a;
+  --c-ordinanza: #f08a55; --c-convocazione: #e0b04a; --c-delibera: #c39af0; --c-determina: #7fb0e6;
+  --c-autorizzazione: #6fc492; --c-avviso: #4fc7cc; --c-matrimonio: #ee7fb2; --c-altro: #a3abb6;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 15px/1.45 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.wrap { max-width: 1320px; margin: 0 auto; display: grid; gap: 18px; }
+a { color: var(--accent); }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* testata */
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.brand { display: grid; gap: 2px; min-width: 0; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font: 600 clamp(28px, 4vw, 40px)/1.05 var(--f-display); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h1 .yr { color: var(--muted); font-weight: 500; }
+.nav { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.btn {
+  border: 1px solid var(--line); background: var(--surface); border-radius: var(--r);
+  padding: 8px 14px; cursor: pointer; font-weight: 600; line-height: 1.2; text-decoration: none; color: var(--fg);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.icon { padding: 8px 12px; font-size: 18px; line-height: 1; }
+.btn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+
+/* strumenti */
+.tools { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  --c: var(--c-altro);
+  display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+  border: 1px solid color-mix(in oklab, var(--c) 35%, var(--line)); border-radius: 999px;
+  background: color-mix(in oklab, var(--c) 10%, var(--surface));
+  padding: 5px 11px 5px 9px; font-size: 13px; font-weight: 600;
+}
+.chip .sw { width: 10px; height: 10px; border-radius: 3px; background: var(--c); flex: none; }
+.chip .n { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="false"] { background: transparent; border-color: var(--line); color: var(--muted); }
+.chip[aria-pressed="false"] .sw { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
+.search { position: relative; flex: 1 1 220px; max-width: 340px; }
+.search input {
+  width: 100%; border: 1px solid var(--line); background: var(--surface); border-radius: var(--r);
+  padding: 8px 12px;
+}
+
+/* griglia del mese */
+.month { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--line); display: grid; gap: 1px; }
+.dow, .weeks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1px; }
+.dow div { background: var(--surface-2); padding: 8px 10px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.day {
+  background: var(--surface); min-height: 132px; padding: 6px 6px 8px; display: flex; flex-direction: column; gap: 4px;
+  cursor: pointer; text-align: left; border: 0; border-radius: 0; min-width: 0; font-size: 13px;
+}
+.day:hover { background: color-mix(in oklab, var(--accent) 5%, var(--surface)); }
+.day.we { background: var(--weekend); }
+.day.out { opacity: .45; }
+.day.empty { cursor: default; }
+.day .num { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 2px; }
+.day .num b { font: 600 15px/1 var(--f-display); font-variant-numeric: tabular-nums; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; }
+.day.today .num b { background: var(--today); color: var(--accent-fg); }
+.day .num small { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.ev {
+  --c: var(--c-altro);
+  display: flex; gap: 6px; align-items: flex-start; border-radius: 5px; padding: 3px 6px;
+  background: color-mix(in oklab, var(--c) 13%, var(--surface)); color: var(--fg); line-height: 1.25; min-width: 0;
+}
+.ev .sw { width: 8px; height: 8px; border-radius: 2px; background: var(--c); flex: none; margin-top: 4px; }
+.ev span:last-child { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.ev.prog { background: transparent; box-shadow: inset 0 0 0 1.5px color-mix(in oklab, var(--c) 60%, transparent); }
+.ev.prog .sw { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
+.more { color: var(--muted); font-size: 12px; font-weight: 600; padding: 0 6px; }
+.dots { display: none; }
+
+/* agenda (telefono) */
+.agenda { display: none; gap: 10px; }
+.ag-day { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 10px 12px; display: grid; gap: 6px; cursor: pointer; text-align: left; width: 100%; }
+.ag-day h3 { margin: 0; font: 600 16px/1.2 var(--f-display); display: flex; justify-content: space-between; gap: 8px; }
+.ag-day h3 small { font: 500 12px var(--f-body); color: var(--muted); }
+.ag-day.today { border-color: var(--today); box-shadow: inset 0 0 0 1px var(--today); }
+
+.foot { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; color: var(--muted); font-size: 13px; }
+.foot p { margin: 0; max-width: 70ch; }
+.note { font-size: 13px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.note i { display: inline-flex; align-items: center; gap: 6px; font-style: normal; }
+.note .k1 { width: 18px; height: 10px; border-radius: 3px; background: color-mix(in oklab, var(--accent) 22%, var(--surface)); }
+.note .k2 { width: 18px; height: 10px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--accent); }
+
+/* pagina del giorno */
+.dayview { display: grid; gap: 18px; max-width: 900px; margin: 0 auto; width: 100%; }
+.dayview .head { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+.dayview h1 { font-size: clamp(26px, 4vw, 38px); }
+.dayview h1::first-letter { text-transform: uppercase; }
+.summary { display: flex; flex-wrap: wrap; gap: 6px; }
+.section-title { font: 600 13px var(--f-body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 6px 0 -6px; }
+.card {
+  --c: var(--c-altro);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 10px; min-width: 0;
+}
+.card .tag { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--c); }
+.card .tag .sw { width: 10px; height: 10px; border-radius: 3px; background: var(--c); }
+.card h2 { margin: 0; font: 600 20px/1.25 var(--f-display); text-wrap: balance; overflow-wrap: anywhere; }
+.card .obj { margin: 0; color: var(--muted); overflow-wrap: anywhere; max-width: 75ch; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px 18px; margin: 0; }
+.facts div { min-width: 0; }
+.facts dt { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.facts dd { margin: 2px 0 0; overflow-wrap: anywhere; }
+.mono { font-family: var(--f-mono); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.state { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.state.on { background: color-mix(in oklab, var(--c-autorizzazione) 16%, var(--surface)); color: var(--c-autorizzazione); }
+.state.off { background: var(--surface-2); color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.empty-day { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 28px; text-align: center; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .weeks .day { min-height: 64px; padding: 4px; }
+  .day .ev, .day .more { display: none; }
+  .day .num { flex-direction: column; align-items: center; gap: 4px; }
+  .day .num small { display: none; }
+  .dots { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; }
+  .dots i { width: 7px; height: 7px; border-radius: 2px; background: var(--c); }
+  .dow div { padding: 6px 2px; text-align: center; font-size: 10px; letter-spacing: .04em; }
+  .agenda { display: grid; }
+  .ag-day .ev span:last-child { -webkit-line-clamp: 3; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .day, .btn, .chip { transition: background-color .15s, border-color .15s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header class="top">
+    <div class="brand">
+      <span class="eyebrow">Albo Pretorio · Comune di Palestrina</span>
+      <h1 id="title">Caricamento…</h1>
+    </div>
+    <nav class="nav" aria-label="Navigazione">
+      <button class="btn icon" id="prev" aria-label="Mese precedente">‹</button>
+      <button class="btn" id="oggi">Oggi</button>
+      <button class="btn icon" id="next" aria-label="Mese successivo">›</button>
+    </nav>
+  </header>
+  <main id="view"></main>
+  <footer class="foot">
+    <p id="upd"></p>
+    <p id="sub"></p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const ORDINE = ["ordinanza", "convocazione", "delibera", "avviso", "matrimonio", "autorizzazione", "determina", "altro"];
+  const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+  const GIORNI = ["lun","mar","mer","gio","ven","sab","dom"];
+  const GIORNI_LUNGHI = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+  const MAX_IN_CASELLA = 4;
+
+  let DATA = { atti: [], gruppi: [] };
+  let pub = new Map();      // giorno -> atti pubblicati
+  let prog = new Map();     // giorno -> atti con un evento in programma
+  let attivi = new Set(ORDINE);
+  let cerca = "";
+  let mese = null;          // Date al primo del mese visualizzato
+
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const pad = (n) => String(n).padStart(2, "0");
+  const key = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const parse = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const oggi = () => { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); };
+  const fmt = (s) => { if (!s) return "—"; const d = parse(s); return `${d.getDate()} ${MESI[d.getMonth()]} ${d.getFullYear()}`; };
+  const nomeGruppo = (g) => (DATA.gruppi.find((x) => x.chiave === g) || {}).nome || "Altri atti";
+  const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+
+  function visibile(a) {
+    if (!attivi.has(a.gruppo)) return false;
+    if (!cerca) return true;
+    const t = `${a.titolo} ${a.oggetto} ${a.tipo} ${a.ufficio} ${a.registro}`.toLowerCase();
+    return cerca.split(/\s+/).every((p) => t.includes(p));
+  }
+  const ordina = (l) => [...l].sort((a, b) => ORDINE.indexOf(a.gruppo) - ORDINE.indexOf(b.gruppo) || b.registro.localeCompare(a.registro, "it", { numeric: true }));
+
+  function indicizza() {
+    pub = new Map(); prog = new Map();
+    for (const a of DATA.atti) {
+      if (a.pubblicato_dal) (pub.get(a.pubblicato_dal) || pub.set(a.pubblicato_dal, []).get(a.pubblicato_dal)).push(a);
+      for (const d of a.date_citate || []) (prog.get(d) || prog.set(d, []).get(d)).push(a);
+    }
+  }
+  const delGiorno = (k) => ({
+    prog: ordina((prog.get(k) || []).filter(visibile)),
+    pub: ordina((pub.get(k) || []).filter(visibile)),
+  });
+
+  /* ---------------- vista mese ---------------- */
+  function legenda() {
+    const conta = {};
+    for (const a of DATA.atti) conta[a.gruppo] = (conta[a.gruppo] || 0) + 1;
+    return ORDINE.filter((g) => conta[g]).map((g) =>
+      `<button class="chip" style="--c:var(--c-${g})" data-g="${g}" aria-pressed="${attivi.has(g)}"><span class="sw"></span>${esc(nomeGruppo(g))} <span class="n">${conta[g]}</span></button>`
+    ).join("");
+  }
+
+  function evHtml(a, inProgramma) {
+    const testo = inProgramma ? `In programma: ${a.titolo}` : a.titolo;
+    return `<div class="ev${inProgramma ? " prog" : ""}" style="--c:var(--c-${a.gruppo})" title="${esc(a.tipo + " – " + a.oggetto)}"><span class="sw"></span><span>${esc(testo)}</span></div>`;
+  }
+
+  function vistaMese() {
+    document.title = "Albo Pretorio Palestrina";
+    $("#title").innerHTML = `${MESI[mese.getMonth()][0].toUpperCase() + MESI[mese.getMonth()].slice(1)} <span class="yr">${mese.getFullYear()}</span>`;
+    $(".nav").hidden = false;
+    const primo = new Date(mese.getFullYear(), mese.getMonth(), 1);
+    const inizio = new Date(primo); inizio.setDate(1 - ((primo.getDay() + 6) % 7));
+    const ultimo = new Date(mese.getFullYear(), mese.getMonth() + 1, 0);
+    const fine = new Date(ultimo); fine.setDate(ultimo.getDate() + (6 - ((ultimo.getDay() + 6) % 7)));
+    const kOggi = key(oggi());
+
+    let celle = "", agenda = "";
+    for (let d = new Date(inizio); d <= fine; d.setDate(d.getDate() + 1)) {
+      const k = key(d);
+      const { prog: pr, pub: pu } = delGiorno(k);
+      const tutti = [...pr.map((a) => [a, true]), ...pu.map((a) => [a, false])];
+      const fuori = d.getMonth() !== mese.getMonth();
+      const we = d.getDay() === 0 || d.getDay() === 6;
+      const cls = ["day", we && "we", fuori && "out", k === kOggi && "today", !tutti.length && "empty"].filter(Boolean).join(" ");
+      const visti = tutti.slice(0, MAX_IN_CASELLA).map(([a, p]) => evHtml(a, p)).join("");
+      const altri = tutti.length > MAX_IN_CASELLA ? `<div class="more">+ altri ${tutti.length - MAX_IN_CASELLA}</div>` : "";
+      const dots = tutti.slice(0, 9).map(([a]) => `<i style="--c:var(--c-${a.gruppo})"></i>`).join("");
+      const label = `${GIORNI_LUNGHI[d.getDay()]} ${d.getDate()} ${MESI[d.getMonth()]}: ${tutti.length ? tutti.length + " atti" : "nessun atto"}`;
+      celle += `<button class="${cls}" data-k="${k}" aria-label="${esc(label)}"${tutti.length ? "" : " tabindex=\"-1\""}>
+        <span class="num"><b>${d.getDate()}</b>${tutti.length ? `<small>${tutti.length}</small>` : ""}<span class="dots">${dots}</span></span>${visti}${altri}</button>`;
+      if (!fuori && tutti.length) {
+        const prime = tutti.slice(0, 5).map(([a, p]) => evHtml(a, p)).join("");
+        agenda += `<button class="ag-day${k === kOggi ? " today" : ""}" data-k="${k}">
+          <h3>${GIORNI_LUNGHI[d.getDay()]} ${d.getDate()} ${MESI[d.getMonth()]}<small>${tutti.length} ${tutti.length === 1 ? "atto" : "atti"} ›</small></h3>
+          ${prime}${tutti.length > 5 ? `<div class="more">+ altri ${tutti.length - 5}</div>` : ""}</button>`;
+      }
+    }
+
+    $("#view").innerHTML = `
+      <div style="display:grid;gap:14px">
+        <div class="tools">
+          <div class="legend" role="group" aria-label="Tipi di atto: tocca per mostrare o nascondere">${legenda()}</div>
+          <label class="search"><input id="q" type="search" placeholder="Cerca: via, ufficio, parola…" value="${esc(cerca)}" aria-label="Cerca negli atti"></label>
+        </div>
+        <div class="note"><i><span class="k1"></span>pubblicato all'albo quel giorno</i><i><span class="k2"></span>evento in programma quel giorno (lavori, chiusure, sedute)</i><span>Tocca un giorno per tutti i dettagli.</span></div>
+        <div class="month" role="grid" aria-label="Calendario del mese">
+          <div class="dow">${GIORNI.map((g) => `<div>${g}</div>`).join("")}</div>
+          <div class="weeks">${celle}</div>
+        </div>
+        <div class="agenda" aria-label="Elenco dei giorni del mese con atti">${agenda || `<div class="empty-day">Nessun atto in questo mese con i filtri scelti.</div>`}</div>
+      </div>`;
+
+    $("#view").querySelectorAll("[data-k]").forEach((el) => el.addEventListener("click", () => {
+      if (el.classList.contains("empty")) return;
+      location.hash = "giorno-" + el.dataset.k;
+    }));
+    $("#view").querySelectorAll(".chip").forEach((el) => el.addEventListener("click", () => {
+      const g = el.dataset.g;
+      attivi.has(g) ? attivi.delete(g) : attivi.add(g);
+      store.set("albo-filtri", JSON.stringify([...attivi]));
+      vistaMese();
+    }));
+    const q = $("#q");
+    q.addEventListener("input", () => {
+      cerca = q.value.trim().toLowerCase();
+      const pos = q.selectionStart;
+      vistaMese();
+      const n = $("#q"); n.focus(); try { n.setSelectionRange(pos, pos); } catch {}
+    });
+  }
+
+  /* ---------------- pagina del giorno ---------------- */
+  function gcalLink(a, giorno) {
+    const d = giorno.replace(/-/g, "");
+    const dopo = new Date(parse(giorno)); dopo.setDate(dopo.getDate() + 1);
+    const p = new URLSearchParams({
+      action: "TEMPLATE",
+      text: `${a.tipo}: ${a.titolo}`,
+      dates: `${d}/${key(dopo).replace(/-/g, "")}`,
+      details: `${a.oggetto}\n\nRegistro albo ${a.registro}\n${a.url}`,
+      location: "Palestrina (RM)",
+    });
+    return "https://calendar.google.com/calendar/render?" + p.toString();
+  }
+
+  function cardHtml(a, k, inProgramma) {
+    const kOggi = key(oggi());
+    const inAlbo = a.pubblicato_al && a.pubblicato_al >= kOggi;
+    const righe = [
+      ["Numero atto", a.numero_atto ? `<span class="mono">${esc(a.numero_atto)}/${esc(a.anno_atto)}</span>` : ""],
+      ["Registro albo", `<span class="mono">${esc(a.registro)}</span>`],
+      ["Ufficio", esc(a.ufficio)],
+      ["Firmato da", esc(a.firmatario)],
+      ["Data dell'atto", a.data_atto ? fmt(a.data_atto) : ""],
+      ["Esecutivo dal", a.data_esecutivita ? fmt(a.data_esecutivita) : ""],
+      ["Pubblicazione", `${fmt(a.pubblicato_dal)} → ${fmt(a.pubblicato_al)} <span class="state ${inAlbo ? "on" : "off"}">${inAlbo ? "visibile all'albo" : "pubblicazione conclusa"}</span>`],
+      ["Date indicate nell'atto", (a.date_citate || []).length ? a.date_citate.map(fmt).join(", ") : ""],
+      ["Allegati", a.allegati ? `${a.allegati} ${a.allegati === 1 ? "documento" : "documenti"}` : ""],
+      ["Spesa prevista", a.spesa ? a.spesa.toLocaleString("it-IT", { style: "currency", currency: "EUR" }) : ""],
+    ].filter(([, v]) => v);
+    return `<article class="card" style="--c:var(--c-${a.gruppo})">
+      <span class="tag"><span class="sw"></span>${esc(a.tipo)}${inProgramma ? " · in programma oggi" : ""}</span>
+      <h2>${esc(a.titolo)}</h2>
+      ${a.oggetto && a.oggetto !== a.titolo ? `<p class="obj">${esc(a.oggetto)}</p>` : ""}
+      <dl class="facts">${righe.map(([t, v]) => `<div><dt>${t}</dt><dd>${v}</dd></div>`).join("")}</dl>
+      <div class="actions">
+        ${a.url ? `<a class="btn primary" href="${esc(a.url)}" target="_blank" rel="noopener">Apri l'atto e gli allegati ↗</a>` : ""}
+        <a class="btn" href="${esc(gcalLink(a, k))}" target="_blank" rel="noopener">Aggiungi a Google Calendar ↗</a>
+      </div>
+    </article>`;
+  }
+
+  function vistaGiorno(k) {
+    const d = parse(k);
+    const { prog: pr, pub: pu } = delGiorno(k);
+    const tot = pr.length + pu.length;
+    const titolo = `${GIORNI_LUNGHI[d.getDay()]} ${d.getDate()} ${MESI[d.getMonth()]} ${d.getFullYear()}`;
+    document.title = `${titolo[0].toUpperCase() + titolo.slice(1)} · Albo Palestrina`;
+    $("#title").textContent = "Dettaglio del giorno";
+    $(".nav").hidden = true;
+    const prima = new Date(d); prima.setDate(d.getDate() - 1);
+    const dopo = new Date(d); dopo.setDate(d.getDate() + 1);
+    const conta = {};
+    for (const a of [...pr, ...pu]) conta[a.gruppo] = (conta[a.gruppo] || 0) + 1;
+    const riepilogo = ORDINE.filter((g) => conta[g]).map((g) =>
+      `<span class="chip" style="--c:var(--c-${g});cursor:default"><span class="sw"></span>${esc(nomeGruppo(g))} <span class="n">${conta[g]}</span></span>`).join("");
+
+    $("#view").innerHTML = `<div class="dayview">
+      <div class="head">
+        <a class="btn" href="#mese-${k.slice(0, 7)}">‹ Torna al calendario</a>
+        <div class="nav" style="display:flex">
+          <a class="btn" href="#giorno-${key(prima)}" aria-label="Giorno precedente">‹ ${prima.getDate()} ${MESI[prima.getMonth()].slice(0, 3)}</a>
+          <a class="btn" href="#giorno-${key(dopo)}" aria-label="Giorno successivo">${dopo.getDate()} ${MESI[dopo.getMonth()].slice(0, 3)} ›</a>
+        </div>
+      </div>
+      <h1>${esc(titolo)}</h1>
+      ${tot ? `<div class="summary">${riepilogo}</div>` : ""}
+      ${pr.length ? `<h2 class="section-title">In programma oggi (${pr.length})</h2>${pr.map((a) => cardHtml(a, k, true)).join("")}` : ""}
+      ${pu.length ? `<h2 class="section-title">Pubblicati all'albo oggi (${pu.length})</h2>${pu.map((a) => cardHtml(a, k, false)).join("")}` : ""}
+      ${tot ? "" : `<div class="empty-day">Nessun atto per questo giorno${cerca || attivi.size < ORDINE.length ? " con i filtri attivi" : ""}.</div>`}
+    </div>`;
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------------- instradamento ---------------- */
+  function route() {
+    const h = location.hash.slice(1);
+    let m;
+    if ((m = h.match(/^giorno-(\d{4}-\d{2}-\d{2})$/))) return vistaGiorno(m[1]);
+    if ((m = h.match(/^mese-(\d{4})-(\d{2})$/))) mese = new Date(+m[1], +m[2] - 1, 1);
+    if (!mese) mese = new Date(oggi().getFullYear(), oggi().getMonth(), 1);
+    vistaMese();
+  }
+  const vaiMese = (delta) => {
+    mese = new Date(mese.getFullYear(), mese.getMonth() + delta, 1);
+    location.hash = `mese-${mese.getFullYear()}-${pad(mese.getMonth() + 1)}`;
+  };
+  $("#prev").addEventListener("click", () => vaiMese(-1));
+  $("#next").addEventListener("click", () => vaiMese(1));
+  $("#oggi").addEventListener("click", () => {
+    const h = `#mese-${oggi().getFullYear()}-${pad(oggi().getMonth() + 1)}`;
+    mese = null;
+    if (location.hash === h) route(); else location.hash = h;
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.target.closest("input") || location.hash.startsWith("#giorno-")) return;
+    if (e.key === "ArrowLeft") vaiMese(-1);
+    if (e.key === "ArrowRight") vaiMese(1);
+  });
+  window.addEventListener("hashchange", route);
+
+  function piedi() {
+    const agg = DATA.aggiornato ? new Date(DATA.aggiornato) : null;
+    $("#upd").innerHTML = `${DATA.atti.length} atti in archivio${agg ? ` · ultimo aggiornamento ${agg.toLocaleDateString("it-IT", { day: "numeric", month: "long" })} alle ${agg.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}` : ""} · fonte: <a href="${esc(DATA.fonte || "#")}" target="_blank" rel="noopener">Albo Pretorio del Comune di Palestrina</a>`;
+    if (/github\.io$/.test(location.hostname)) {
+      const base = location.href.replace(/[#?].*$/, "").replace(/index\.html$/, "");
+      const ics = base + "calendario.ics";
+      const gcal = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(ics.replace(/^https:/, "webcal:"));
+      $("#sub").innerHTML = `<a href="${gcal}" target="_blank" rel="noopener">Aggiungi tutto a Google Calendar ↗</a> · <a href="${base}calendario-ordinanze.ics">solo ordinanze (.ics)</a>`;
+    }
+  }
+
+  try { const f = JSON.parse(store.get("albo-filtri")); if (Array.isArray(f) && f.length) attivi = new Set(f); } catch {}
+
+  fetch("data/atti.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((j) => { DATA = j; indicizza(); piedi(); route(); })
+    .catch(() => {
+      $("#title").textContent = "Dati non disponibili";
+      $("#view").innerHTML = `<div class="empty-day">Non riesco a leggere il file degli atti (data/atti.json). Riprova tra qualche minuto: l'aggiornamento potrebbe essere in corso.</div>`;
+    });
+})();
+</script>
+
+</body>
+</html>

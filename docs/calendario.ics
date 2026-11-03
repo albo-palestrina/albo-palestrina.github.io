@@ -1,0 +1,2229 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//albo-palestrina//calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Albo Pretorio Palestrina – tutti gli atti
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:5760658-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Determina: Censimento VTA speditiva di parco Barberini e parco Cing
+ olani di Palestrina – impegno di spesa
+DESCRIPTION:Determina n. 1047/2026 (registro albo 2145/2026)\nCensimento VT
+ A speditiva di parco Barberini e parco Cingolani di Palestrina. Impegno di
+  spesa\nUfficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDINI - SERVIZI TECN
+ OLOGICI A RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn pubblicazione da
+ l 2026-11-03 al 2026-11-18\nAtto e documenti: https://palestrina.trasparen
+ za-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5760658
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5760658
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5760656-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Determina: Servizio di accoglienza e mantenimento dei cani randagi 
+ nel territorio comunale. Proroga mese di ottobre
+DESCRIPTION:Determina n. 1075/2026 (registro albo 2144/2026)\nServizio di a
+ ccoglienza e mantenimento dei cani randagi nel territorio comunale. Prorog
+ a mese di ottobre\nUfficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDINI - S
+ ERVIZI TECNOLOGICI A RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn pubbl
+ icazione dal 2026-11-03 al 2026-11-18\nAtto e documenti: https://palestrin
+ a.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/displ
+ ay/5760656
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5760656
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5760654-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Determina: Concessione rateizzazione pagamento verbale codice della
+  strada
+DESCRIPTION:Determina n. 1100/2026 (registro albo 2143/2026)\nConcessione r
+ ateizzazione pagamento verbale codice della strada\nUfficio: Settore I: ST
+ AFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nFirmatario: Marco Di Barto
+ lomeo\nIn pubblicazione dal 2026-11-03 al 2026-11-18\nAtto e documenti: ht
+ tps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-a
+ p/-/papca/display/5760654
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5760654
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5760652-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Determina: Fornitura di vestiario invernale da assegnare agli opera
+ i comunali – impegno di spesa
+DESCRIPTION:Determina n. 1073/2026 (registro albo 2142/2026)\nFornitura di 
+ vestiario invernale da assegnare agli operai comunali. Impegno di spesa\nU
+ fficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDINI - SERVIZI TECNOLOGICI A
+  RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-11
+ -03 al 2026-11-18\nAtto e documenti: https://palestrina.trasparenza-valuta
+ zione-merito.it/web/trasparenza/papca-ap/-/papca/display/5760652
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5760652
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5760610-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:Determina: Fornitura di materiale di ferramenta vario per la manute
+ nzione del patrimonio comunale – impegno di spesa
+DESCRIPTION:Determina n. 1081/2026 (registro albo 2141/2026)\nFornitura di 
+ materiale di ferramenta vario per la manutenzione del patrimonio comunale.
+  Impegno di spesa\nUfficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDINI - S
+ ERVIZI TECNOLOGICI A RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn pubbl
+ icazione dal 2026-11-03 al 2026-11-18\nAtto e documenti: https://palestrin
+ a.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/displ
+ ay/5760610
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5760610
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755821-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Autorizzazione: Permesso di costruire in sanatoria 414 del 29.10.20
+ 26 l. 326/2003 e l.r. 12/2004
+DESCRIPTION:Autorizzazione n. 414/2026 (registro albo 2140/2026)\nPermesso 
+ di costruire in sanatoria 414 del 29.10.2026 l. 326/2003 e l.r. 12/2004\nU
+ fficio: SPORTELLO UNICO PER L'EDILIZIA e CONDONO EDILIZIO\nIn pubblicazion
+ e dal 2026-11-02 al 2026-11-17\nAtto e documenti: https://palestrina.trasp
+ arenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755
+ 821
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755821
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755737-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Ordinanza: Viabilità modificata: Via Pedemontana (posizionamento c
+ assone scarrabile per rifiuti ingombranti)
+DESCRIPTION:Ordinanza n. 230/2026 (registro albo 2139/2026)\nPosizionamento
+  cassone scarrabile per rifiuti ingombranti - data 4/11/2026\; Nuova disci
+ plina temporanea della viabilita' in via Pedemontana\nUfficio: Settore I: 
+ STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 202
+ 6-11-02 al 2026-11-17\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755737
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755737
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755737-g2026-11-04@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:In programma (ordinanza): Viabilità modificata: Via Pedemontana (p
+ osizionamento cassone scarrabile per rifiuti ingombranti)
+DESCRIPTION:Ordinanza n. 230/2026 (registro albo 2139/2026)\nPosizionamento
+  cassone scarrabile per rifiuti ingombranti - data 4/11/2026\; Nuova disci
+ plina temporanea della viabilita' in via Pedemontana\nUfficio: Settore I: 
+ STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 202
+ 6-11-02 al 2026-11-17\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755737
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755737
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755620-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Autorizzazione: Permesso di costruire in sanatoria 2804 del 29.10.2
+ 026 l. 47/1985
+DESCRIPTION:Autorizzazione n. 2804/2026 (registro albo 2138/2026)\nPermesso
+  di costruire in sanatoria 2804 del 29.10.2026 l. 47/1985\nUfficio: SPORTE
+ LLO UNICO PER L'EDILIZIA e CONDONO EDILIZIO\nIn pubblicazione dal 2026-11-
+ 02 al 2026-11-17\nAtto e documenti: https://palestrina.trasparenza-valutaz
+ ione-merito.it/web/trasparenza/papca-ap/-/papca/display/5755620
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755620
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5755411-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Autorizzazione: Pubblicazione autorizzazione paesaggistica n. 47 de
+ l 2/11/2026
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2137/2026)\nPubblicazione 
+ autorizzazione paesaggistica n. 47 del 2/11/2026\nUfficio: SPORTELLO UNICO
+  PER L'EDILIZIA e CONDONO EDILIZIO\nIn pubblicazione dal 2026-11-02 al 202
+ 6-11-17\nAtto e documenti: https://palestrina.trasparenza-valutazione-meri
+ to.it/web/trasparenza/papca-ap/-/papca/display/5755411
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5755411
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753551-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Piazza Regina margherita (lavori 
+ di manutenzione straordinaria del manto stradale)
+DESCRIPTION:Ordinanza n. 226/2026 (registro albo 2136/2026)\nLavori di manu
+ tenzione straordinaria del manto stradale\; Nuova disciplina temporanea de
+ lla viabilita' in piazza Regina margherita\nUfficio: Settore I: STAFF\, SE
+ RVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al
+  2026-11-14\nAtto e documenti: https://palestrina.trasparenza-valutazione-
+ merito.it/web/trasparenza/papca-ap/-/papca/display/5753551
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753551
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753550-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Centro storico e nella frazione d
+ i Carchitti (commemorazione giorno dell'unita' nazionale e gornata delle f
+ orze armate)
+DESCRIPTION:Ordinanza n. 229/2026 (registro albo 2135/2026)\nCommemorazione
+  giorno dell'unita' nazionale e gornata delle forze armate - data 4/11/202
+ 6\; Nuova disciplina temporanea della viabilita' nel centro storico e nell
+ a frazione di Carchitti\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIV
+ I E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e
+  documenti: https://palestrina.trasparenza-valutazione-merito.it/web/trasp
+ arenza/papca-ap/-/papca/display/5753550
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753550
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753550-g2026-11-04@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:In programma (ordinanza): Viabilità modificata: Centro storico e n
+ ella frazione di Carchitti (commemorazione giorno dell'unita' nazionale e 
+ gornata delle forze armate)
+DESCRIPTION:Ordinanza n. 229/2026 (registro albo 2135/2026)\nCommemorazione
+  giorno dell'unita' nazionale e gornata delle forze armate - data 4/11/202
+ 6\; Nuova disciplina temporanea della viabilita' nel centro storico e nell
+ a frazione di Carchitti\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIV
+ I E AFFARI GENERALI\nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e
+  documenti: https://palestrina.trasparenza-valutazione-merito.it/web/trasp
+ arenza/papca-ap/-/papca/display/5753550
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753550
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753549-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Via Ignazio piersanti (lavori di 
+ ristrutturazione edilizia di un immobile residenziale)
+DESCRIPTION:Ordinanza n. 228/2026 (registro albo 2134/2026)\nLavori di rist
+ rutturazione edilizia di un immobile residenziale\; Nuova disciplina tempo
+ ranea della viabilita' in via Ignazio piersanti\nUfficio: Settore I: STAFF
+ \, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-
+ 30 al 2026-11-14\nAtto e documenti: https://palestrina.trasparenza-valutaz
+ ione-merito.it/web/trasparenza/papca-ap/-/papca/display/5753549
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753549
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5753548-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Ordinanza: Viabilità modificata: Via Dante alighieri (lavori di or
+ dinaria manutenzione della copertura del fabbricato sito in via D. Alighie
+ ri n.25-26)
+DESCRIPTION:Ordinanza n. 227/2026 (registro albo 2133/2026)\nLavori di ordi
+ naria manutenzione della copertura del fabbricato sito in via D. Alighieri
+  n.25-26\; Nuova disciplina temporanea della viabilita' in via Dante aligh
+ ieri\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI
+ \nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto e documenti: https:/
+ /palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/p
+ apca/display/5753548
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5753548
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5752293-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Convocazione Consiglio comunale: Convocazione del consiglio comunal
+ e. Integrazione o.d.g
+DESCRIPTION:Convocazione Consiglio comunale n. 0/0 (registro albo 2131/2026
+ )\nConsiglio comunale. Integrazione o.d.g\nUfficio: SERVIZIO DI STAFF DELL
+ A SEGRETERIA GENERALE\nIn pubblicazione dal 2026-10-30 al 2026-11-14\nAtto
+  e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/tra
+ sparenza/papca-ap/-/papca/display/5752293
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5752293
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5750067-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Autorizzazione: Permesso di costruire in sanatoria 413 del 29.10.20
+ 26 l. 326/2003 e l.r. 12/2004
+DESCRIPTION:Autorizzazione n. 413/2026 (registro albo 2130/2026)\nPermesso 
+ di costruire in sanatoria 413 del 29.10.2026 l. 326/2003 e l.r. 12/2004\nU
+ fficio: SPORTELLO UNICO PER L'EDILIZIA e CONDONO EDILIZIO\nIn pubblicazion
+ e dal 2026-10-29 al 2026-11-13\nAtto e documenti: https://palestrina.trasp
+ arenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5750
+ 067
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5750067
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5749086-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1093/2026 (registro albo 2129/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5749086
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5749086
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5749083-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza per morosità dall'assegnazio
+ ne alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1097/2026 (registro albo 2128/2026)\nProvvedimento
+  di decadenza per morosità dall'assegnazione alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5749083
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5749083
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748927-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprità di a.t.e.r. Pro
+ vincia di roma
+DESCRIPTION:Determina n. 1096/2026 (registro albo 2127/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprità di a.t.e.r. Provincia di roma\nUfficio: PATRIM
+ ONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-1
+ 1-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.
+ it/web/trasparenza/papca-ap/-/papca/display/5748927
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748927
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748925-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1095/2026 (registro albo 2126/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5748925
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748925
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748923-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1094/2026 (registro albo 2125/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5748923
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748923
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748780-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1092/2026 (registro albo 2124/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5748780
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748780
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748778-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Restituzione diritti di notificazione municipio roma vi.
+  Impegno e liquidazione
+DESCRIPTION:Determina n. 1087/2026 (registro albo 2123/2026)\nRestituzione 
+ diritti di notificazione municipio roma vi. Impegno e liquidazione\nUffici
+ o: SPORTELLO UNICO PER L'EDILIZIA e CONDONO EDILIZIO\nFirmatario: Fabio Ga
+ mbini\nIn pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: ht
+ tps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-a
+ p/-/papca/display/5748778
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748778
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748776-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Restutizione diritti notificatori comune di cave. Impegn
+ o e liquidazione
+DESCRIPTION:Determina n. 1086/2026 (registro albo 2122/2026)\nRestutizione 
+ diritti notificatori comune di cave. Impegno e liquidazione\nUfficio: SPOR
+ TELLO UNICO PER L'EDILIZIA e CONDONO EDILIZIO\nFirmatario: Fabio Gambini\n
+ In pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: https://p
+ alestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/pap
+ ca/display/5748776
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748776
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748774-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: “programma straordinario regionale di investimenti pub
+ blici” di cui all'art. 1\, c.38\, della l.r. N. 14/2008 come modificato 
+ dall'art. 60 della l.r. 14/2021 – concessione di finanziamenti straordin
+ ari in attuazione della dgr 951/2022” - annualità 2026-2027 – interve
+ nto: “manutenzione straordinaria mediante il rifacimento del manto strad
+ ale di via Degli arcioni\, via Della croce\, via Ceciliana e via Colle mar
+ tino”.affidamento incarico perdl e cse
+DESCRIPTION:Determina n. 1071/2026 (registro albo 2121/2026)\n“programma 
+ straordinario regionale di investimenti pubblici” di cui all'art. 1\, c.
+ 38\, della l.r. N. 14/2008 come modificato dall'art. 60 della l.r. 14/2021
+  – concessione di finanziamenti straordinari in attuazione della dgr 951
+ /2022” - annualità 2026-2027 – intervento: “manutenzione straordina
+ ria mediante il rifacimento del manto stradale di via Degli arcioni\, via 
+ Della croce\, via Ceciliana e via Colle martino”.affidamento incarico pe
+ rdl e cse\nUfficio: LL.PP. UFFICIO ESPROPRI REPERIMENTO FONDI STRUTTURALI\
+ nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-11-13\
+ nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.it/we
+ b/trasparenza/papca-ap/-/papca/display/5748774
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748774
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748691-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Servizio di elaborazione e stampa e consegna degli avvis
+ i di pagamento del canone per l'illuminazione votiva annualità 2026 press
+ o il cimitero comunale — 31 ottobre\, 1-2 novembre 2026 – impegno e af
+ fidamento
+DESCRIPTION:Determina n. 1074/2026 (registro albo 2120/2026)\nServizio di e
+ laborazione e stampa e consegna degli avvisi di pagamento del canone per l
+ 'illuminazione votiva annualità 2026 presso il cimitero comunale — 31 o
+ ttobre\, 1-2 novembre 2026 – impegno e affidamento\nUfficio: SERVIZI CIM
+ ITERIALI\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 20
+ 26-11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-mer
+ ito.it/web/trasparenza/papca-ap/-/papca/display/5748691
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748691
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748689-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Rettifica della determinazione r.g. N. 946 del 30/09/202
+ 6di conferimento dell'incarico di elevata qualificazione presso il diparti
+ mento finanziario – area 3 di elevata qualificazione\, settore 2 – tri
+ buti\, entrate comunali e contenzioso tributario\, alla dipendente martina
+  fanfoni\, all'esito della procedura comparativa indetta con determinazion
+ e n. 821 del 31/08/2026
+DESCRIPTION:Determina n. 1083/2026 (registro albo 2119/2026)\nRettifica del
+ la determinazione r.g. N. 946 del 30/09/2026di conferimento dell'incarico 
+ di elevata qualificazione presso il dipartimento finanziario – area 3 di
+  elevata qualificazione\, settore 2 – tributi\, entrate comunali e conte
+ nzioso tributario\, alla dipendente martina fanfoni\, all'esito della proc
+ edura comparativa indetta con determinazione n. 821 del 31/08/2026\nUffici
+ o: PERSONALE\, PROVVEDITORATO\, ECONOMATO E GESTIONE DELLE RISORSE UMANE\n
+ Firmatario: Alessandra Galizia\nIn pubblicazione dal 2026-10-29 al 2026-11
+ -13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.i
+ t/web/trasparenza/papca-ap/-/papca/display/5748689
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748689
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748687-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Rettifica della determinazione r.g. N. 934 del 30/09/202
+ 6\, di conferimento dell'incarico di elevata qualificazione presso il dipa
+ rtimento finanziario – area 1 di elevata qualificazione\, settore 1 – 
+ gestione del bilancio\, contabilità e servizi fiscali\; Settore 3 – per
+ sonale\, economato e gestione delle risorse umane\, al dipendente nello sa
+ belli\, all'esito della procedura comparativa indetta con determinazione n
+ . 821 del 31/08/2026
+DESCRIPTION:Determina n. 1082/2026 (registro albo 2118/2026)\nRettifica del
+ la determinazione r.g. N. 934 del 30/09/2026\, di conferimento dell'incari
+ co di elevata qualificazione presso il dipartimento finanziario – area 1
+  di elevata qualificazione\, settore 1 – gestione del bilancio\, contabi
+ lità e servizi fiscali\; Settore 3 – personale\, economato e gestione d
+ elle risorse umane\, al dipendente nello sabelli\, all'esito della procedu
+ ra comparativa indetta con determinazione n. 821 del 31/08/2026\nUfficio: 
+ PERSONALE\, PROVVEDITORATO\, ECONOMATO E GESTIONE DELLE RISORSE UMANE\nFir
+ matario: Alessandra Galizia\nIn pubblicazione dal 2026-10-29 al 2026-11-13
+ \nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.it/w
+ eb/trasparenza/papca-ap/-/papca/display/5748687
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748687
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748564-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: “effegi s.r.l.” – autorizzazione allo svolgimento 
+ della manifestazione ai sensi dell'art. 68 del r.d. 18/6/1931 n. 773 (t.u.
+ l.p.s.)
+DESCRIPTION:Determina n. 1077/2026 (registro albo 2117/2026)\n“effegi s.r
+ .l.” – autorizzazione allo svolgimento della manifestazione ai sensi d
+ ell'art. 68 del r.d. 18/6/1931 n. 773 (t.u.l.p.s.)\nUfficio: IV DIPARTIMEN
+ TO - POLIZIA LOCALE\nFirmatario: Marco Di Bartolomeo\nIn pubblicazione dal
+  2026-10-29 al 2026-11-13\nAtto e documenti: https://palestrina.trasparenz
+ a-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5748564
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748564
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748562-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: “lavori di adeguamento e messa norma degli spogliatoi 
+ del campo principi Barberini in località Carchitti”. Approvazione stato
+  finale e c.r.e. E relativa liquidazione
+DESCRIPTION:Determina n. 1053/2026 (registro albo 2116/2026)\n“lavori di 
+ adeguamento e messa norma degli spogliatoi del campo principi Barberini in
+  località Carchitti”. Approvazione stato finale e c.r.e. E relativa liq
+ uidazione\nUfficio: LL.PP. UFFICIO ESPROPRI REPERIMENTO FONDI STRUTTURALI\
+ nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-11-13\
+ nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.it/we
+ b/trasparenza/papca-ap/-/papca/display/5748562
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748562
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748561-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Ordinanza: Nuova viabilità: Istituzione e regolamentazione della c
+ ircolazione stradale sulla nuova pista ciclope-donale realizzata sul sedim
+ e della ex linea ferroviaria dismessa denominata “roma-fiuggi-alatri-fro
+ sinone”
+DESCRIPTION:Ordinanza n. 225/2026 (registro albo 2115/2026)\nIstituzione e 
+ regolamentazione della circolazione stradale sulla nuova pista ciclope-don
+ ale realizzata sul sedime della ex linea ferroviaria dismessa denominata 
+ “roma-fiuggi-alatri-frosinone”\; Nuova disciplina permanente della via
+ bilita'\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENER
+ ALI\nIn pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: http
+ s://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/
+ -/papca/display/5748561
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748561
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748559-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: “lavori di manutenzione straordinaria sedi scolastiche
+  comunali” scuola via Barberini. Cup_h92b26003290004. Approvazione varia
+ nte al pfte
+DESCRIPTION:Determina n. 1048/2026 (registro albo 2114/2026)\n“lavori di 
+ manutenzione straordinaria sedi scolastiche comunali” scuola via Barberi
+ ni. Cup_h92b26003290004. Approvazione variante al pfte\nUfficio: LL.PP. UF
+ FICIO ESPROPRI REPERIMENTO FONDI STRUTTURALI\nFirmatario: Fabio Gambini\nI
+ n pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: https://pa
+ lestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papc
+ a/display/5748559
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748559
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748402-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: “novae nundinae - i mercati nuovi di praeneste” riqu
+ alificazione di piazzale Italia - cup_h95c25001230002 – affidamento lavo
+ ri
+DESCRIPTION:Determina n. 1084/2026 (registro albo 2113/2026)\n“novae nund
+ inae - i mercati nuovi di praeneste” riqualificazione di piazzale Italia
+  - cup_h95c25001230002 – affidamento lavori\nUfficio: AREA 4\nFirmatario
+ : Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e doc
+ umenti: https://palestrina.trasparenza-valutazione-merito.it/web/trasparen
+ za/papca-ap/-/papca/display/5748402
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748402
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748400-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  ingombranti - eer 20.03.07 - anno 2027 - approvazione verbale di selezion
+ e degli operatori economici
+DESCRIPTION:Determina n. 1090/2026 (registro albo 2112/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati ingombranti - eer 20.03.07 - a
+ nno 2027 - approvazione verbale di selezione degli operatori economici\nUf
+ ficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazi
+ one dal 2026-10-29 al 2026-11-13\nAtto e documenti: https://palestrina.tra
+ sparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/57
+ 48400
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748400
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748398-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  biodegradabili di cucine e mense - eer 20.01.08 - anno 2027 - approvazion
+ e verbale di selezione degli operatori economici
+DESCRIPTION:Determina n. 1089/2026 (registro albo 2111/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati biodegradabili di cucine e men
+ se - eer 20.01.08 - anno 2027 - approvazione verbale di selezione degli op
+ eratori economici\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio G
+ ambini\nIn pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: h
+ ttps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-
+ ap/-/papca/display/5748398
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748398
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748396-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani non differenz
+ iati - eer 20.03.01 - anno 2027 - procedura di gara - approvazione verbale
+  di selezione degli operatori economici
+DESCRIPTION:Determina n. 1088/2026 (registro albo 2110/2026)\nServizio di t
+ rattamento dei rifiuti urbani non differenziati - eer 20.03.01 - anno 2027
+  - procedura di gara - approvazione verbale di selezione degli operatori e
+ conomici\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nI
+ n pubblicazione dal 2026-10-29 al 2026-11-13\nAtto e documenti: https://pa
+ lestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papc
+ a/display/5748396
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748396
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5748277-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  di medicinali citotossici e citostatici – eer 20.01.31 - affidamento se
+ rvizio anno 2027
+DESCRIPTION:Determina n. 1041/2026 (registro albo 2109/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati di medicinali citotossici e ci
+ tostatici – eer 20.01.31 - affidamento servizio anno 2027\nUfficio: II D
+ IPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 202
+ 6-10-29 al 2026-11-13\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5748277
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5748277
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5747871-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1091/2026 (registro albo 2108/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5747871
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5747871
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5747869-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Provvedimento di decadenza dall'assegnazione per morosit
+ à alloggio di edilizia residenziale pubblica di proprietà di a.t.e.r. Pr
+ ovincia di roma
+DESCRIPTION:Determina n. 1098/2026 (registro albo 2107/2026)\nProvvedimento
+  di decadenza dall'assegnazione per morosità alloggio di edilizia residen
+ ziale pubblica di proprietà di a.t.e.r. Provincia di roma\nUfficio: PATRI
+ MONIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-29 al 2026-
+ 11-13\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5747869
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5747869
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5747732-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Determina: Aggiornamento del piano annuale dei flussi di cassa per 
+ l'anno 2026 al secondo e terzo trimestre 2026 (art.6\, decreto legge 155/2
+ 024)
+DESCRIPTION:Determina n. 1101/2026 (registro albo 2106/2026)\nAggiornamento
+  del piano annuale dei flussi di cassa per l'anno 2026 al secondo e terzo 
+ trimestre 2026 (art.6\, decreto legge 155/2024)\nUfficio: III DIPARTIMENTO
+  - FINANZIARIO\nFirmatario: Alessandra Galizia\nIn pubblicazione dal 2026-
+ 10-29 al 2026-11-13\nAtto e documenti: https://palestrina.trasparenza-valu
+ tazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5747732
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5747732
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5746399-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  di toner per stampa esauriti - eer 08.03.18 - affidamento servizio anno 2
+ 027
+DESCRIPTION:Determina n. 1051/2026 (registro albo 2105/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati di toner per stampa esauriti -
+  eer 08.03.18 - affidamento servizio anno 2027\nUfficio: II DIPARTIMENTO -
+  TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-28 al 20
+ 26-11-12\nAtto e documenti: https://palestrina.trasparenza-valutazione-mer
+ ito.it/web/trasparenza/papca-ap/-/papca/display/5746399
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5746399
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5746397-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Fornitura gas naturale per funzionamento uffici e serviz
+ i comunali. Adesione alla convenzione consip
+DESCRIPTION:Determina n. 1085/2026 (registro albo 2104/2026)\nFornitura gas
+  naturale per funzionamento uffici e servizi comunali. Adesione alla conve
+ nzione consip\nUfficio: LL.PP. UFFICIO ESPROPRI REPERIMENTO FONDI STRUTTUR
+ ALI\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-28 al 2026-11
+ -12\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.i
+ t/web/trasparenza/papca-ap/-/papca/display/5746397
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5746397
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745614-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Richiesta omologazione campo di calcio a/5 impianto spor
+ tivo comunale palaverde. Impegno e liquidazione
+DESCRIPTION:Determina n. 1050/2026 (registro albo 2103/2026)\nRichiesta omo
+ logazione campo di calcio a/5 impianto sportivo comunale palaverde. Impegn
+ o e liquidazione\nUfficio: PATRIMONIO\nFirmatario: Fabio Gambini\nIn pubbl
+ icazione dal 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrin
+ a.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/displ
+ ay/5745614
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745614
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745612-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1054/2026 (registro albo 2102/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745612
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745612
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745610-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1061/2026 (registro albo 2101/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745610
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745610
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745608-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1055/2026 (registro albo 2100/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745608
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745608
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745606-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1056/2026 (registro albo 2099/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745606
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745606
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745604-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1057/2026 (registro albo 2098/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745604
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745604
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745602-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1062/2026 (registro albo 2097/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745602
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745602
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745600-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1059/2026 (registro albo 2096/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745600
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745600
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745598-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1063/2026 (registro albo 2095/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745598
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745598
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745596-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1064/2026 (registro albo 2094/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745596
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745596
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745594-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1065/2026 (registro albo 2093/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745594
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745594
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745469-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1058/2026 (registro albo 2092/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745469
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745469
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745467-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di raccolta\, trasporto e commercio dei rifiuti
+  urbani differenziati di abbigliamento - eer 20.01.10 - e prodotti tessili
+  - eer 20.01.11 - affidamento servizio anno 2027
+DESCRIPTION:Determina n. 1040/2026 (registro albo 2091/2026)\nServizio di r
+ accolta\, trasporto e commercio dei rifiuti urbani differenziati di abbigl
+ iamento - eer 20.01.10 - e prodotti tessili - eer 20.01.11 - affidamento s
+ ervizio anno 2027\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio G
+ ambini\nIn pubblicazione dal 2026-10-28 al 2026-11-12\nAtto e documenti: h
+ ttps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-
+ ap/-/papca/display/5745467
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745467
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745465-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  di vernici\, inchiostri\, adesivi e resine contenenti sostanze pericolose
+  – eer 20.01.27 - affidamento servizio anno 2027
+DESCRIPTION:Determina n. 1046/2026 (registro albo 2090/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati di vernici\, inchiostri\, ades
+ ivi e resine contenenti sostanze pericolose – eer 20.01.27 - affidamento
+  servizio anno 2027\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio
+  Gambini\nIn pubblicazione dal 2026-10-28 al 2026-11-12\nAtto e documenti:
+  https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papc
+ a-ap/-/papca/display/5745465
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745465
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745463-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  biodegradabili – eer 20.02.01 - affidamento servizio anno 2027
+DESCRIPTION:Determina n. 1045/2026 (registro albo 2089/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati biodegradabili – eer 20.02.0
+ 1 - affidamento servizio anno 2027\nUfficio: II DIPARTIMENTO - TECNICO\nFi
+ rmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-28 al 2026-11-12\nAt
+ to e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/t
+ rasparenza/papca-ap/-/papca/display/5745463
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745463
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745461-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  dei residui della pulizia stradale – eer 20.03.03 - affidamento servizi
+ o anno 2027
+DESCRIPTION:Determina n. 1044/2026 (registro albo 2088/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati dei residui della pulizia stra
+ dale – eer 20.03.03 - affidamento servizio anno 2027\nUfficio: II DIPART
+ IMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-
+ 28 al 2026-11-12\nAtto e documenti: https://palestrina.trasparenza-valutaz
+ ione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745461
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745461
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745459-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  di legno – eer 20.01.38 - affidamento servizio anno 2027
+DESCRIPTION:Determina n. 1043/2026 (registro albo 2087/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati di legno – eer 20.01.38 - af
+ fidamento servizio anno 2027\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatar
+ io: Fabio Gambini\nIn pubblicazione dal 2026-10-28 al 2026-11-12\nAtto e d
+ ocumenti: https://palestrina.trasparenza-valutazione-merito.it/web/traspar
+ enza/papca-ap/-/papca/display/5745459
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745459
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745321-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  di miscugli di cemento\, mattoni\, mattonelle e ceramiche– eer 17.01.07
+  - affidamento servizio anno 2027
+DESCRIPTION:Determina n. 1042/2026 (registro albo 2086/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati di miscugli di cemento\, matto
+ ni\, mattonelle e ceramiche– eer 17.01.07 - affidamento servizio anno 20
+ 27\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubb
+ licazione dal 2026-10-28 al 2026-11-12\nAtto e documenti: https://palestri
+ na.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/disp
+ lay/5745321
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745321
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5745319-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Determina: Fondo delle risorse decentrate per il personale dipenden
+ te con qualifica non dirigenziale – anno 2026 – integrazione della det
+ erminazione r.g. N. 1020 del 13/10/2026 di costituzione definitiva del fon
+ do e aggiornamento dei relativi allegati
+DESCRIPTION:Determina n. 1099/2026 (registro albo 2085/2026)\nFondo delle r
+ isorse decentrate per il personale dipendente con qualifica non dirigenzia
+ le – anno 2026 – integrazione della determinazione r.g. N. 1020 del 13
+ /10/2026 di costituzione definitiva del fondo e aggiornamento dei relativi
+  allegati\nUfficio: PERSONALE\, PROVVEDITORATO\, ECONOMATO E GESTIONE DELL
+ E RISORSE UMANE\nFirmatario: Alessandra Galizia\nIn pubblicazione dal 2026
+ -10-28 al 2026-11-12\nAtto e documenti: https://palestrina.trasparenza-val
+ utazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5745319
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5745319
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743692-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  ingombranti - eer 20.03.07 - anno 2027 - procedura di gara - commissione 
+ giudicatrice
+DESCRIPTION:Determina n. 1080/2026 (registro albo 2084/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati ingombranti - eer 20.03.07 - a
+ nno 2027 - procedura di gara - commissione giudicatrice\nUfficio: II DIPAR
+ TIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10
+ -27 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-valuta
+ zione-merito.it/web/trasparenza/papca-ap/-/papca/display/5743692
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743692
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743690-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani differenziati
+  biodegradabili di cucine e mense - eer 20.01.08 - anno 2027 - procedura d
+ i gara - commissione giudicatrice
+DESCRIPTION:Determina n. 1079/2026 (registro albo 2083/2026)\nServizio di t
+ rattamento dei rifiuti urbani differenziati biodegradabili di cucine e men
+ se - eer 20.01.08 - anno 2027 - procedura di gara - commissione giudicatri
+ ce\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubb
+ licazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://palestri
+ na.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/disp
+ lay/5743690
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743690
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743688-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Servizio di trattamento dei rifiuti urbani non differenz
+ iati - eer 20.03.01 - anno 2027 - procedura di gara - commissione giudicat
+ rice
+DESCRIPTION:Determina n. 1078/2026 (registro albo 2082/2026)\nServizio di t
+ rattamento dei rifiuti urbani non differenziati - eer 20.03.01 - anno 2027
+  - procedura di gara - commissione giudicatrice\nUfficio: II DIPARTIMENTO 
+ - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-27 al 2
+ 026-11-11\nAtto e documenti: https://palestrina.trasparenza-valutazione-me
+ rito.it/web/trasparenza/papca-ap/-/papca/display/5743688
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743688
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743687-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Convocazione commissione: Convocazione commissione consiliare perma
+ nente conferenza dei capigruppo
+DESCRIPTION:Convocazione commissione n. 0/0 (registro albo 2081/2026)\nConv
+ ocazione commissione consiliare permanente conferenza dei capigruppo\nUffi
+ cio: SERVIZIO DI STAFF DELLA SEGRETERIA GENERALE\nIn pubblicazione dal 202
+ 6-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5743687
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743687
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743612-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Convocazione commissione: Convocazione commissione consiliare perma
+ nente affari generali\, personale\, decentramento\, area metropolitana\, b
+ ilancio\, attività produttive\, artigianato\, patrimonio e informatica
+DESCRIPTION:Convocazione commissione n. 0/0 (registro albo 2080/2026)\nConv
+ ocazione commissione consiliare permanente affari generali\, personale\, d
+ ecentramento\, area metropolitana\, bilancio\, attività produttive\, arti
+ gianato\, patrimonio e informatica\nUfficio: SERVIZIO DI STAFF DELLA SEGRE
+ TERIA GENERALE\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e docu
+ menti: https://palestrina.trasparenza-valutazione-merito.it/web/trasparenz
+ a/papca-ap/-/papca/display/5743612
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743612
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743577-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Autorizzazione: Rif.0029990/2026 - rif.0014975/2026 - vincolo idrog
+ eologico in subdelega - di biagio mauro - via_pratobini n. 6
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2079/2026)\nRif.0029990/20
+ 26 - rif.0014975/2026 - vincolo idrogeologico in subdelega - di biagio mau
+ ro - via_pratobini n. 6\nUfficio: SPORTELLO UNICO PER L'EDILIZIA e CONDONO
+  EDILIZIO\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti
+ : https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pap
+ ca-ap/-/papca/display/5743577
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743577
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743247-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Giunta: Avviso pubblico per l'assegnazione delle risors
+ e della quota a gestione statale dell'otto per mille dell'imposta sul redd
+ ito delle persone fisiche\, di cui all'articolo 48 della legge 20 maggio 1
+ 985\, n. 222\, alla luce di quanto previsto dall'articolo 46-bis del decre
+ to-legge 26 ottobre 2019\, n. 124\, convertito\, con modificazioni\, dalla
+  legge 19 dicembre 2019\, n. 157 – annualità 2023/2024. “demolizione 
+ e ricostruzione della palestra scolastica dell'istituto comprensivo “kar
+ ol wojtyla” – scuola primaria di piazza Ungheria\, 4 – Palestrina (r
+ m)” – approvazione progetto esecutivo e richiesta finanziamento. Cup h
+ 94d26003520005
+DESCRIPTION:Delibera di Giunta n. 210/2026 (registro albo 2078/2026)\nAvvis
+ o pubblico per l'assegnazione delle risorse della quota a gestione statale
+  dell'otto per mille dell'imposta sul reddito delle persone fisiche\, di c
+ ui all'articolo 48 della legge 20 maggio 1985\, n. 222\, alla luce di quan
+ to previsto dall'articolo 46-bis del decreto-legge 26 ottobre 2019\, n. 12
+ 4\, convertito\, con modificazioni\, dalla legge 19 dicembre 2019\, n. 157
+  – annualità 2023/2024. “demolizione e ricostruzione della palestra s
+ colastica dell'istituto comprensivo “karol wojtyla” – scuola primari
+ a di piazza Ungheria\, 4 – Palestrina (rm)” – approvazione progetto 
+ esecutivo e richiesta finanziamento. Cup h94d26003520005\nUfficio: LL.PP. 
+ UFFICIO ESPROPRI REPERIMENTO FONDI STRUTTURALI\nIn pubblicazione dal 2026-
+ 10-27 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-valu
+ tazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5743247
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743247
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743245-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Giunta: Atto di indirizzo al dirigente del iv dipartime
+ nto – comandante della polizia locale\, per la locazione passiva di immo
+ bili siti in Palestrina\, via Pedemontana ii nn. 111/113\, da destinare a 
+ sede e deposito dei mezzi e delle attrezzature del gruppo comunale di prot
+ ezione civile
+DESCRIPTION:Delibera di Giunta n. 211/2026 (registro albo 2077/2026)\nAtto 
+ di indirizzo al dirigente del iv dipartimento – comandante della polizia
+  locale\, per la locazione passiva di immobili siti in Palestrina\, via Pe
+ demontana ii nn. 111/113\, da destinare a sede e deposito dei mezzi e dell
+ e attrezzature del gruppo comunale di protezione civile\nUfficio: IV DIPAR
+ TIMENTO - POLIZIA LOCALE\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nA
+ tto e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/
+ trasparenza/papca-ap/-/papca/display/5743245
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743245
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743243-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Giunta: Screening oncologici - campagna di prevenzione 
+ promossa dalla regione Lazio e dalla asl roma 5 - publi-peas. Concessione 
+ patrocinio
+DESCRIPTION:Delibera di Giunta n. 212/2026 (registro albo 2076/2026)\nScree
+ ning oncologici - campagna di prevenzione promossa dalla regione Lazio e d
+ alla asl roma 5 - publi-peas. Concessione patrocinio\nUfficio: CULTURA\, T
+ URISMO\, SPORT\, TEMPO LIBERO\, BIBLIOTECA\nIn pubblicazione dal 2026-10-2
+ 7 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-valutazi
+ one-merito.it/web/trasparenza/papca-ap/-/papca/display/5743243
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743243
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743241-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Giunta: Autorizzazione alla costituzione avverso ricors
+ o proposto dinanzi la corte di giustizia tributaria di secondo grado del L
+ azio
+DESCRIPTION:Delibera di Giunta n. 214/2026 (registro albo 2075/2026)\nAutor
+ izzazione alla costituzione avverso ricorso proposto dinanzi la corte di g
+ iustizia tributaria di secondo grado del Lazio\nUfficio: III DIPARTIMENTO 
+ - FINANZIARIO\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e docum
+ enti: https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza
+ /papca-ap/-/papca/display/5743241
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743241
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743239-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Giunta: Approvazione del "codice di comportamento degli
+  operatori del settore degli autoservizi pubblici non di linea (servizio t
+ axi e ncc)" e relativo sistema sanzionatorio
+DESCRIPTION:Delibera di Giunta n. 213/2026 (registro albo 2074/2026)\nAppro
+ vazione del "codice di comportamento degli operatori del settore degli aut
+ oservizi pubblici non di linea (servizio taxi e ncc)" e relativo sistema s
+ anzionatorio\nUfficio: IV DIPARTIMENTO - POLIZIA LOCALE\nIn pubblicazione 
+ dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.traspar
+ enza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/574323
+ 9
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743239
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5743237-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Delibera di Consiglio: Approvazione del bilancio consolidato relati
+ vo all'esercizio 2025
+DESCRIPTION:Delibera di Consiglio n. 38/2026 (registro albo 2073/2026)\nApp
+ rovazione del bilancio consolidato relativo all'esercizio 2025\nUfficio: I
+ II DIPARTIMENTO - FINANZIARIO\nIn pubblicazione dal 2026-10-27 al 2026-11-
+ 11\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.it
+ /web/trasparenza/papca-ap/-/papca/display/5743237
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5743237
+CATEGORIES:Delibere
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5742694-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Vincolo idrogeologico: Richiesta di pubblicazione all'albo pretorio
+  comune di Palestrina - richiesta di autorizzazione allo scarico tramite s
+ ub-irrigazione via Loreto n. 60 - anconitano michela
+DESCRIPTION:Vincolo idrogeologico n. 0/0 (registro albo 2072/2026)\nRichies
+ ta di pubblicazione all'albo pretorio comune di Palestrina - richiesta di 
+ autorizzazione allo scarico tramite sub-irrigazione via Loreto n. 60 - anc
+ onitano michela\nUfficio: URP E PROTOCOLLO\nIn pubblicazione dal 2026-10-2
+ 7 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-valutazi
+ one-merito.it/web/trasparenza/papca-ap/-/papca/display/5742694
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5742694
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5742627-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Pubblicazione di matrimonio: Pubblicazione di matrimonio (atto n. 5
+ 6)
+DESCRIPTION:Pubblicazione di matrimonio n. 56/2026 (registro albo 2071/2026
+ )\nAtto anno 2026 n. 56 mazzenga agostino turianelli agata\nUfficio: STATO
+  CIVILE\nIn pubblicazione dal 2026-10-27 al 2026-11-04\nAtto e documenti: 
+ https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca
+ -ap/-/papca/display/5742627
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5742627
+CATEGORIES:Pubblicazioni di matrimonio
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5742351-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Convocazione Consiglio comunale: Convocazione del consiglio comunal
+ e
+DESCRIPTION:Convocazione Consiglio comunale n. 0/0 (registro albo 2070/2026
+ )\nConsiglio comunale\nUfficio: SERVIZIO DI STAFF DELLA SEGRETERIA GENERAL
+ E\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: https:
+ //palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/
+ papca/display/5742351
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5742351
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741977-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Concessione rateizzazione pagamento verbale codice della
+  strada
+DESCRIPTION:Determina n. 1069/2026 (registro albo 2069/2026)\nConcessione r
+ ateizzazione pagamento verbale codice della strada\nUfficio: Settore I: ST
+ AFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nFirmatario: Marco Di Barto
+ lomeo\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: ht
+ tps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-a
+ p/-/papca/display/5741977
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741977
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741975-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Concessione rateizzazione pagamento verbale codice della
+  strada
+DESCRIPTION:Determina n. 1070/2026 (registro albo 2068/2026)\nConcessione r
+ ateizzazione pagamento verbale codice della strada\nUfficio: Settore I: ST
+ AFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nFirmatario: Marco Di Barto
+ lomeo\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: ht
+ tps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-a
+ p/-/papca/display/5741975
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741975
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741802-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Interventi di manutenzione da eseguire sul pozzo del pia
+ no insediamenti produttivi ubicato in via Prenestina nuova
+DESCRIPTION:Determina n. 1034/2026 (registro albo 2067/2026)\nInterventi di
+  manutenzione da eseguire sul pozzo del piano insediamenti produttivi ubic
+ ato in via Prenestina nuova\nUfficio: II DIPARTIMENTO - TECNICO\nFirmatari
+ o: Fabio Gambini\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e do
+ cumenti: https://palestrina.trasparenza-valutazione-merito.it/web/traspare
+ nza/papca-ap/-/papca/display/5741802
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741802
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741688-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Manutenzione straordinaria per la scalinata del museo de
+ l presepe in via Madonna dell'aquila – impegno di spesa
+DESCRIPTION:Determina n. 1003/2026 (registro albo 2066/2026)\nManutenzione 
+ straordinaria per la scalinata del museo del presepe in via Madonna dell'a
+ quila. Impegno di spesa\nUfficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDI
+ NI - SERVIZI TECNOLOGICI A RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn
+  pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://pal
+ estrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca
+ /display/5741688
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741688
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741626-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Bando di concorso pubblico\, per esami\, per la copertur
+ a di n. 2 posti nel profilo professionale di istruttore amministrativo-con
+ tabile\, con contratto a tempo pieno ed indeterminato\, da assegnare\, in 
+ sede di prima destinazione\, all'ufficio tributi del dipartimento finanzia
+ rio del comune di Palestrina\, di cui n.1 riservato prioritariamente ai vo
+ lontari delle ff.aa. Ai sensi dell'art. 1014 c.3 e c.4\, e dell'art. 678 d
+ el d.lgs. 66/2010. Determinazioni in merito all'affidamento alla ditta myo
+  s.p.a. Della fornitura di strumenti necessari all'espletamento del concor
+ so - cig bd5dd2d4a0 - cod. Univoco 3rn4uw
+DESCRIPTION:Determina n. 1067/2026 (registro albo 2065/2026)\nBando di conc
+ orso pubblico\, per esami\, per la copertura di n. 2 posti nel profilo pro
+ fessionale di istruttore amministrativo-contabile\, con contratto a tempo 
+ pieno ed indeterminato\, da assegnare\, in sede di prima destinazione\, al
+ l'ufficio tributi del dipartimento finanziario del comune di Palestrina\, 
+ di cui n.1 riservato prioritariamente ai volontari delle ff.aa. Ai sensi d
+ ell'art. 1014 c.3 e c.4\, e dell'art. 678 del d.lgs. 66/2010. Determinazio
+ ni in merito all'affidamento alla ditta myo s.p.a. Della fornitura di stru
+ menti necessari all'espletamento del concorso - cig bd5dd2d4a0 - cod. Univ
+ oco 3rn4uw\nUfficio: PERSONALE\, PROVVEDITORATO\, ECONOMATO E GESTIONE DEL
+ LE RISORSE UMANE\nFirmatario: Alessandra Galizia\nIn pubblicazione dal 202
+ 6-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5741626
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741626
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741624-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Servizio di connettivita' delle sedi principali dell'ent
+ e. Convenzione consip spc2. Integrazione somme. Cig quadro 5133642f61 - ci
+ g figlio b45c264771
+DESCRIPTION:Determina n. 1030/2026 (registro albo 2064/2026)\nServizio di c
+ onnettivita' delle sedi principali dell'ente. Convenzione consip spc2. Int
+ egrazione somme. Cig quadro 5133642f61 - cig figlio b45c264771\nUfficio: T
+ ELEFONIA FISSA E MOBILE\, SERVIZI INFORMATICI\, SOFTWARE/HARDWARE\nFirmata
+ rio: Giuseppe Scaramella\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nA
+ tto e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/
+ trasparenza/papca-ap/-/papca/display/5741624
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741624
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741485-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Restituzione oneri concessori fascicolo edilizio n. 288/
+ 2021
+DESCRIPTION:Determina n. 1037/2026 (registro albo 2063/2026)\nRestituzione 
+ oneri concessori fascicolo edilizio n. 288/2021\nUfficio: SPORTELLO UNICO 
+ PER L'EDILIZIA e CONDONO EDILIZIO\nFirmatario: Fabio Gambini\nIn pubblicaz
+ ione dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.tr
+ asparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5
+ 741485
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741485
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741483-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Contributo economico straordinario – cap. 19330\, in f
+ avore di minore sottoposto a tutela. Impegno di spesa e liquidazione
+DESCRIPTION:Determina n. 1024/2026 (registro albo 2062/2026)\nContributo ec
+ onomico straordinario – cap. 19330\, in favore di minore sottoposto a tu
+ tela. Impegno di spesa e liquidazione\nUfficio: SERVIZI SOCIALI\nFirmatari
+ o: Giuseppe Scaramella\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtt
+ o e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/tr
+ asparenza/papca-ap/-/papca/display/5741483
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741483
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741481-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Svincolo somma del servizio di accoglienza e manteniment
+ o dei cani randagi nel territorio comunale
+DESCRIPTION:Determina n. 1036/2026 (registro albo 2061/2026)\nSvincolo somm
+ a del servizio di accoglienza e mantenimento dei cani randagi nel territor
+ io comunale\nUfficio: SERVIZI MANUTENTIVI - PARCHEGGI E GIARDINI - SERVIZI
+  TECNOLOGICI A RETE - AUTOPARCO\nFirmatario: Fabio Gambini\nIn pubblicazio
+ ne dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.tras
+ parenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/574
+ 1481
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741481
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741479-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Strategia di sviluppo locale 2023/2027. Impegno e liquid
+ azione quota associativa adesione gal 2026
+DESCRIPTION:Determina n. 1035/2026 (registro albo 2060/2026)\nStrategia di 
+ sviluppo locale 2023/2027. Impegno e liquidazione quota associativa adesio
+ ne gal 2026\nUfficio: CULTURA\, TURISMO\, SPORT\, TEMPO LIBERO\, BIBLIOTEC
+ A\nFirmatario: Giuseppe Scaramella\nIn pubblicazione dal 2026-10-27 al 202
+ 6-11-11\nAtto e documenti: https://palestrina.trasparenza-valutazione-meri
+ to.it/web/trasparenza/papca-ap/-/papca/display/5741479
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741479
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741477-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Restituzione oneri concessori fascicolo edilizio n. 318/
+ 2022
+DESCRIPTION:Determina n. 1038/2026 (registro albo 2059/2026)\nRestituzione 
+ oneri concessori fascicolo edilizio n. 318/2022\nUfficio: SPORTELLO UNICO 
+ PER L'EDILIZIA e CONDONO EDILIZIO\nFirmatario: Fabio Gambini\nIn pubblicaz
+ ione dal 2026-10-27 al 2026-11-11\nAtto e documenti: https://palestrina.tr
+ asparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5
+ 741477
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741477
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5741475-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261028
+SUMMARY:Determina: Concessione rateizzazione pagamento verbale codice della
+  strada
+DESCRIPTION:Determina n. 1032/2026 (registro albo 2058/2026)\nConcessione r
+ ateizzazione pagamento verbale codice della strada\nUfficio: Settore I: ST
+ AFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nFirmatario: Marco Di Barto
+ lomeo\nIn pubblicazione dal 2026-10-27 al 2026-11-11\nAtto e documenti: ht
+ tps://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-a
+ p/-/papca/display/5741475
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5741475
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5739351-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:Determina: Fornitura di spille in argento con logo personalizzato 
+ – impegno di spesa
+DESCRIPTION:Determina n. 1066/2026 (registro albo 2057/2026)\nFornitura di 
+ spille in argento con logo personalizzato. Impegno di spesa\nUfficio: CULT
+ URA\, TURISMO\, SPORT\, TEMPO LIBERO\, BIBLIOTECA\nFirmatario: Giuseppe Sc
+ aramella\nIn pubblicazione dal 2026-10-26 al 2026-11-10\nAtto e documenti:
+  https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papc
+ a-ap/-/papca/display/5739351
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5739351
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5737297-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Ordinanza: Viabilità modificata: Piazzale Antistante la chiesa di 
+ san francesco (festa inizio anno catechistico)
+DESCRIPTION:Ordinanza n. 224/2026 (registro albo 2055/2026)\nFesta inizio a
+ nno catechistico - data 25/10/2026\; Nuova disciplina temporanea della via
+ bilita' nel piazzale Antistante la chiesa di san francesco\nUfficio: Setto
+ re I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione d
+ al 2026-10-24 al 2026-11-08\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5737297
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5737297
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5737297-g2026-10-25@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:In programma (ordinanza): Viabilità modificata: Piazzale Antistant
+ e la chiesa di san francesco (festa inizio anno catechistico)
+DESCRIPTION:Ordinanza n. 224/2026 (registro albo 2055/2026)\nFesta inizio a
+ nno catechistico - data 25/10/2026\; Nuova disciplina temporanea della via
+ bilita' nel piazzale Antistante la chiesa di san francesco\nUfficio: Setto
+ re I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione d
+ al 2026-10-24 al 2026-11-08\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5737297
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5737297
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736753-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ l dipartimento tecnico
+DESCRIPTION:Determina n. 1060/2026 (registro albo 2054/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente del dipartimento tecnico\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-23 al 2026-11-07\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5736753
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736753
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736641-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Determina: Recepimento atto di indirizzo della giunta comunale\, ap
+ provazione dello schema di contratto di locazione passiva degli immobili s
+ iti in Palestrina\, via Pedemontana ii nn. 111/113 e contestuale assunzion
+ e dell'impegno di spesa pluriennale per la sede e deposito del gruppo comu
+ nale di protezione civile\, cig: Bd7d22e5a6
+DESCRIPTION:Determina n. 1068/2026 (registro albo 2053/2026)\nRecepimento a
+ tto di indirizzo della giunta comunale\, approvazione dello schema di cont
+ ratto di locazione passiva degli immobili siti in Palestrina\, via Pedemon
+ tana ii nn. 111/113 e contestuale assunzione dell'impegno di spesa plurien
+ nale per la sede e deposito del gruppo comunale di protezione civile\, cig
+ : Bd7d22e5a6\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI 
+ GENERALI\nFirmatario: Marco Di Bartolomeo\nIn pubblicazione dal 2026-10-23
+  al 2026-11-07\nAtto e documenti: https://palestrina.trasparenza-valutazio
+ ne-merito.it/web/trasparenza/papca-ap/-/papca/display/5736641
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736641
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736366-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Autorizzazione: Autorizzazione idrogeologica in subdelega fasc 32 d
+ el 2024
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2052/2026)\nAutorizzazione
+  idrogeologica in subdelega fasc 32 del 2024\nUfficio: IGIENE E SANITA\nIn
+  pubblicazione dal 2026-10-23 al 2026-11-07\nAtto e documenti: https://pal
+ estrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca
+ /display/5736366
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736366
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736365-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Ordinanza: Costituzione in giudizio per ricorso dinanzi alla corte 
+ di giustizia tributaria di secondo grado del Lazio
+DESCRIPTION:Ordinanza n. 26/2026 (registro albo 2051/2026)\nCostituzione in
+  giudizio per ricorso dinanzi alla corte di giustizia tributaria di second
+ o grado del Lazio\nUfficio: Sindaco\nIn pubblicazione dal 2026-10-23 al 20
+ 26-11-07\nAtto e documenti: https://palestrina.trasparenza-valutazione-mer
+ ito.it/web/trasparenza/papca-ap/-/papca/display/5736365
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736365
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736033-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Autorizzazione: Autorizzazione allo scarico su suolo fasc 36 del 20
+ 25
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2050/2026)\nAutorizzazione
+  allo scarico su suolo fasc 36 del 2025\nUfficio: IGIENE E SANITA\nIn pubb
+ licazione dal 2026-10-23 al 2026-11-07\nAtto e documenti: https://palestri
+ na.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/disp
+ lay/5736033
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736033
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5736032-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Autorizzazione: Autorizzazione allo scarico su suolo fasc 40 del 20
+ 26
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2049/2026)\nAutorizzazione
+  allo scarico su suolo fasc 40 del 2026\nUfficio: IGIENE E SANITA\nIn pubb
+ licazione dal 2026-10-23 al 2026-11-07\nAtto e documenti: https://palestri
+ na.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/disp
+ lay/5736032
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5736032
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5734282-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Avviso pubblico: Conservazione del catasto terreni verificazioni qu
+ inquennali gratuite artt.118 e 119 del regolamento n. 2153/1938
+DESCRIPTION:Avviso pubblico n. 0/0 (registro albo 2048/2026)\nConservazione
+  del catasto terreni verificazioni quinquennali gratuite artt.118 e 119 de
+ l regolamento n. 2153/1938\nUfficio: URP E PROTOCOLLO\nIn pubblicazione da
+ l 2026-10-23 al 2027-01-31\nAtto e documenti: https://palestrina.trasparen
+ za-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5734282
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5734282
+CATEGORIES:Avvisi e manifesti
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5734007-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Convocazione commissione: Convocazione commissione consiliare perma
+ nente conferenza dei capigruppo
+DESCRIPTION:Convocazione commissione n. 0/0 (registro albo 2047/2026)\nConv
+ ocazione commissione consiliare permanente conferenza dei capigruppo\nUffi
+ cio: SERVIZIO DI STAFF DELLA SEGRETERIA GENERALE\nIn pubblicazione dal 202
+ 6-10-22 al 2026-11-06\nAtto e documenti: https://palestrina.trasparenza-va
+ lutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5734007
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5734007
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5734006-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Convocazione commissione: Convocazione commissione consiliare perma
+ nente affari generali\, personale\, decentramento\, area metropolitana\, b
+ ilancio\, attività produttive\, artigianato\, patrimonio e informatica
+DESCRIPTION:Convocazione commissione n. 0/0 (registro albo 2046/2026)\nConv
+ ocazione commissione consiliare permanente affari generali\, personale\, d
+ ecentramento\, area metropolitana\, bilancio\, attività produttive\, arti
+ gianato\, patrimonio e informatica\nUfficio: SERVIZIO DI STAFF DELLA SEGRE
+ TERIA GENERALE\nIn pubblicazione dal 2026-10-22 al 2026-11-06\nAtto e docu
+ menti: https://palestrina.trasparenza-valutazione-merito.it/web/trasparenz
+ a/papca-ap/-/papca/display/5734006
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5734006
+CATEGORIES:Convocazioni
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5733901-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Determina: Variazione compensativa fra capitoli di spesa dello stes
+ so macroaggregato (art. 175\, comma 5-quater)\, d.lgs. 267/2000 e art. 74 
+ del regolamento di contabilita' per polizia locale
+DESCRIPTION:Determina n. 1033/2026 (registro albo 2045/2026)\nVariazione co
+ mpensativa fra capitoli di spesa dello stesso macroaggregato (art. 175\, c
+ omma 5-quater)\, d.lgs. 267/2000 e art. 74 del regolamento di contabilita'
+  per polizia locale\nUfficio: III DIPARTIMENTO - FINANZIARIO\nFirmatario: 
+ Alessandra Galizia\nIn pubblicazione dal 2026-10-22 al 2026-11-06\nAtto e 
+ documenti: https://palestrina.trasparenza-valutazione-merito.it/web/traspa
+ renza/papca-ap/-/papca/display/5733901
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5733901
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5733151-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Determina: Restauro e recupero funzionale della chiesa di santa mar
+ ia in villa sita del cimitero comunale. Approvazione perizia di variante
+DESCRIPTION:Determina n. 1028/2026 (registro albo 2044/2026)\nRestauro e re
+ cupero funzionale della chiesa di santa maria in villa sita del cimitero c
+ omunale. Approvazione perizia di variante\nUfficio: LL.PP. UFFICIO ESPROPR
+ I REPERIMENTO FONDI STRUTTURALI\nFirmatario: Fabio Gambini\nIn pubblicazio
+ ne dal 2026-10-22 al 2026-11-06\nAtto e documenti: https://palestrina.tras
+ parenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/573
+ 3151
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5733151
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5732503-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Ordinanza: Chisura del centro operativo comunale
+DESCRIPTION:Ordinanza n. 222/2026 (registro albo 2043/2026)\nChisura del ce
+ ntro operativo comunale\nUfficio: Settore IV: POLIZIA EDILIZIA\nIn pubblic
+ azione dal 2026-10-22 al 2026-11-06\nAtto e documenti: https://palestrina.
+ trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display
+ /5732503
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5732503
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5731106-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Vincolo idrogeologico: Pubblicazione all'albo pretario vincolo idor
+ geologico\; Richiedente: Turianelli augusta
+DESCRIPTION:Vincolo idrogeologico n. 0/0 (registro albo 2042/2026)\nPubblic
+ azione all'albo pretario vincolo idorgeologico\; Richiedente: Turianelli a
+ ugusta\nUfficio: URP E PROTOCOLLO\nIn pubblicazione dal 2026-10-22 al 2026
+ -11-06\nAtto e documenti: https://palestrina.trasparenza-valutazione-merit
+ o.it/web/trasparenza/papca-ap/-/papca/display/5731106
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5731106
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5730961-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Autorizzazione: Autorizzazione allo scarico su suolo fasc 77 del 20
+ 26
+DESCRIPTION:Autorizzazione n. 0/0 (registro albo 2041/2026)\nAutorizzazione
+  allo scarico su suolo fasc 77 del 2026\nUfficio: IGIENE E SANITA\nIn pubb
+ licazione dal 2026-10-22 al 2026-11-06\nAtto e documenti: https://palestri
+ na.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/disp
+ lay/5730961
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5730961
+CATEGORIES:Autorizzazioni e permessi
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5730233-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Ordinanza: Viabilità modificata: Via Mezzaselva (lavori di bonific
+ a della rete idrica)
+DESCRIPTION:Ordinanza n. 221/2026 (registro albo 2040/2026)\nLavori di boni
+ fica della rete idrica\; Nuova disciplina temporanea della viabilita' in v
+ ia Mezzaselva\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTRATIVI E AFFARI
+  GENERALI\nIn pubblicazione dal 2026-10-21 al 2026-11-05\nAtto e documenti
+ : https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pap
+ ca-ap/-/papca/display/5730233
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5730233
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5729246-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Determina: Concessione congedo parentale di cui all'art.32 - comma 
+ 1 - del d.lgs.151/2001 e ss.mm.ii. Dipendente comunale matr.678
+DESCRIPTION:Determina n. 1039/2026 (registro albo 2039/2026)\nConcessione c
+ ongedo parentale di cui all'art.32 - comma 1 - del d.lgs.151/2001 e ss.mm.
+ ii. Dipendente comunale matr.678\nUfficio: PERSONALE\, PROVVEDITORATO\, EC
+ ONOMATO E GESTIONE DELLE RISORSE UMANE\nFirmatario: Alessandra Galizia\nIn
+  pubblicazione dal 2026-10-21 al 2026-11-05\nAtto e documenti: https://pal
+ estrina.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca
+ /display/5729246
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5729246
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5728072-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Ordinanza: Attivazione del centro operativo comunale
+DESCRIPTION:Ordinanza n. 220/2026 (registro albo 2038/2026)\nAttivazione de
+ l centro operativo comunale\nUfficio: Settore I: STAFF\, SERVIZI AMMINISTR
+ ATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-21 al 2026-11-05\nAt
+ to e documenti: https://palestrina.trasparenza-valutazione-merito.it/web/t
+ rasparenza/papca-ap/-/papca/display/5728072
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5728072
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5726062-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Ordinanza: Viabilità modificata: Via Dei cappuccini (lavori di rif
+ acimento e manutenzione del manto stradale)
+DESCRIPTION:Ordinanza n. 219/2026 (registro albo 2036/2026)\nLavori di rifa
+ cimento e manutenzione del manto stradale\; Nuova disciplina temporanea de
+ lla viabilita' in via Dei cappuccini\nUfficio: Settore I: STAFF\, SERVIZI 
+ AMMINISTRATIVI E AFFARI GENERALI\nIn pubblicazione dal 2026-10-20 al 2026-
+ 11-04\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito
+ .it/web/trasparenza/papca-ap/-/papca/display/5726062
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5726062
+CATEGORIES:Ordinanze
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5726060-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Determina: Accertamento di entrata somma a ristoro del danno subìt
+ o dal patrimonio comunale a seguito di sinistro stradale in data 27/06/202
+ 6
+DESCRIPTION:Determina n. 1027/2026 (registro albo 2035/2026)\nAccertamento 
+ di entrata somma a ristoro del danno subìto dal patrimonio comunale a seg
+ uito di sinistro stradale in data 27/06/2026\nUfficio: PATRIMONIO\nFirmata
+ rio: Fabio Gambini\nIn pubblicazione dal 2026-10-20 al 2026-11-04\nAtto e 
+ documenti: https://palestrina.trasparenza-valutazione-merito.it/web/traspa
+ renza/papca-ap/-/papca/display/5726060
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5726060
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5726058-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Determina: Utilizzo impianto sportivo comunale pala iaia da parte d
+ ella asd ginnastica valmontone nei giorni 15 e 16 ottobre 2026. Accertamen
+ to di entrata
+DESCRIPTION:Determina n. 1023/2026 (registro albo 2034/2026)\nUtilizzo impi
+ anto sportivo comunale pala iaia da parte della asd ginnastica valmontone 
+ nei giorni 15 e 16 ottobre 2026. Accertamento di entrata\nUfficio: PATRIMO
+ NIO\nFirmatario: Fabio Gambini\nIn pubblicazione dal 2026-10-20 al 2026-11
+ -04\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.i
+ t/web/trasparenza/papca-ap/-/papca/display/5726058
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5726058
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5725951-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Determina: Attribuzione indennità per specifiche responsabilità e
+ x art. 84 c.c.n.l. Del 16.11.2022 comparto funzioni locali a dipendente de
+ lla segreteria generale
+DESCRIPTION:Determina n. 1029/2026 (registro albo 2033/2026)\nAttribuzione 
+ indennità per specifiche responsabilità ex art. 84 c.c.n.l. Del 16.11.20
+ 22 comparto funzioni locali a dipendente della segreteria generale\nUffici
+ o: SEGRETARIO GENERALE\nFirmatario: Dott.ssa Daniela Glonfoni\nIn pubblica
+ zione dal 2026-10-20 al 2026-11-04\nAtto e documenti: https://palestrina.t
+ rasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/
+ 5725951
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5725951
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5725949-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Determina: Servizio di pulizia straordinaria di vari immobili comun
+ ali - impegno di spesa
+DESCRIPTION:Determina n. 1018/2026 (registro albo 2032/2026)\nServizio di p
+ ulizia straordinaria di vari immobili comunali - impegno di spesa\nUfficio
+ : II DIPARTIMENTO - TECNICO\nFirmatario: Fabio Gambini\nIn pubblicazione d
+ al 2026-10-20 al 2026-11-04\nAtto e documenti: https://palestrina.traspare
+ nza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/5725949
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5725949
+CATEGORIES:Determine
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5599295-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:Manifesto: Aggiornamento albo unico delle persone idonee all'uffici
+ o di scrutatore di seggio elettorale
+DESCRIPTION:Manifesto n. 0/0 (registro albo 1626/2026)\nAggiornamento albo 
+ unico delle persone idonee all'ufficio di scrutatore di seggio elettorale\
+ nUfficio: SERVIZI DEMOGRAFICI\nIn pubblicazione dal 2026-08-26 al 2026-11-
+ 30\nAtto e documenti: https://palestrina.trasparenza-valutazione-merito.it
+ /web/trasparenza/papca-ap/-/papca/display/5599295
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/5599295
+CATEGORIES:Avvisi e manifesti
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4806244-pub@albo-palestrina
+DTSTAMP:20261103T150041Z
+DTSTART;VALUE=DATE:20251016
+DTEND;VALUE=DATE:20251017
+SUMMARY:Avviso di deposito: Avviso di deposito
+DESCRIPTION:Avviso di deposito n. 0/0 (registro albo 1795/2025)\n(oggetto n
+ on indicato nell'albo: aprire l'atto)\nUfficio: AA.GG.\, URP\, PROTOCOLLO\
+ , MESSI E USCIERI\nIn pubblicazione dal 2025-10-16 al \nAtto e documenti: 
+ https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/papca
+ -ap/-/papca/display/4806244
+URL:https://palestrina.trasparenza-valutazione-merito.it/web/trasparenza/pa
+ pca-ap/-/papca/display/4806244
+CATEGORIES:Avvisi e manifesti
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
