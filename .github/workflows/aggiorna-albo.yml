@@ -25,7 +25,11 @@ jobs:
           python-version: "3.12"
 
       - name: Prepara l'ambiente
-        run: python -m pip install --quiet cryptography pypdf
+        run: |
+          python -m pip install --quiet cryptography pypdf
+          # lettura dei documenti scansionati (OCR in italiano)
+          sudo apt-get update -qq > /dev/null
+          sudo apt-get install -y -qq --no-install-recommends tesseract-ocr tesseract-ocr-ita poppler-utils > /dev/null
 
       - name: Scarica l'albo e rigenera i dati cifrati
         env:
