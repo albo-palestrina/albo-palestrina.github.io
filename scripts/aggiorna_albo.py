@@ -291,7 +291,7 @@ def atto_da_riga(r):
 # I documenti scansionati (solo immagine) vengono letti con il riconoscimento del testo (OCR).
 GRUPPI_CON_DOCUMENTO = ("ordinanza", "convocazione", "avviso")
 MAX_DOCUMENTI_PER_GIRO = 40
-DOC_VERSIONE = 3          # se cambia la logica di lettura, i documenti vengono riletti
+DOC_VERSIONE = 4          # se cambia la logica di lettura, i documenti vengono riletti
 RE_ATOB = re.compile(r"atob\((?:&#39;|')([A-Za-z0-9+/=]+)(?:&#39;|')\)")
 MESI_IT = {m: i for i, m in enumerate(["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto",
                                         "settembre", "ottobre", "novembre", "dicembre"], 1)}
@@ -356,6 +356,8 @@ def giorni_nel_testo(testo, pubblicato_dal, margine=0, escludi_riferimenti=True)
     trovate = _date_trovate(t, pub.year if pub else datetime.now().year)
     if escludi_riferimenti:
         trovate = [v for v in trovate if not RE_RIFERIMENTO.search(t[max(0, v[0] - 60):v[0]])]
+        if pub:   # "... n. 413 del 29.10.2026": data di un atto precedente, non un giorno di efficacia
+            trovate = [v for v in trovate if not (re.search(r"\bdel\s*$", t[max(0, v[0] - 6):v[0]], re.I) and v[2][-1] < pub)]
     giorni, in_coppia = set(), set()
 
     def aggiungi_intervallo(d1, d2):
