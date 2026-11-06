@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Prepara l'ambiente
-        run: python -m pip install --quiet cryptography
+        run: python -m pip install --quiet cryptography pypdf
 
       - name: Scarica l'albo e rigenera i dati cifrati
         env:
