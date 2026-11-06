@@ -418,10 +418,25 @@ def url_documento(opener, url_atto):
     return None
 
 
+_OCR_PRONTO = None
+
+
+def strumenti_ocr():
+    """Installa tesseract solo la prima volta che serve davvero (documento scansionato da leggere)."""
+    global _OCR_PRONTO
+    if _OCR_PRONTO is None:
+        if not (shutil.which("pdftoppm") and shutil.which("tesseract")) and shutil.which("apt-get"):
+            print("Installo tesseract per leggere i documenti scansionati...")
+            subprocess.run("sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends "
+                           "tesseract-ocr tesseract-ocr-ita poppler-utils", shell=True, capture_output=True, timeout=900)
+        _OCR_PRONTO = bool(shutil.which("pdftoppm") and shutil.which("tesseract"))
+    return _OCR_PRONTO
+
+
 def ocr_pdf(dati, pagine=3):
-    """Testo di un PDF scansionato, con tesseract (lingua italiana). Vuoto se gli strumenti non ci sono."""
-    if not (shutil.which("pdftoppm") and shutil.which("tesseract")):
-        return ""
+    """Testo di un PDF scansionato, con tesseract (lingua italiana)."""
+    if not strumenti_ocr():
+        raise RuntimeError("OCR non disponibile")          # l'atto viene riprovato al giro successivo
     with tempfile.TemporaryDirectory() as cartella:
         pdf = Path(cartella) / "atto.pdf"
         pdf.write_bytes(dati)
