@@ -357,7 +357,7 @@ def giorni_nel_testo(testo, pubblicato_dal, margine=0, escludi_riferimenti=True)
     if escludi_riferimenti:
         trovate = [v for v in trovate if not RE_RIFERIMENTO.search(t[max(0, v[0] - 60):v[0]])]
         if pub:   # "... n. 413 del 29.10.2026": data di un atto precedente, non un giorno di efficacia
-            trovate = [v for v in trovate if not (re.search(r"\bdel\s*$", t[max(0, v[0] - 6):v[0]], re.I) and v[2][-1] < pub)]
+            trovate = [v for v in trovate if not (re.search(r"\bdel\s*$", t[max(0, v[0] - 6):v[0]], re.I) and v[2][-1] <= pub)]
     giorni, in_coppia = set(), set()
 
     def aggiungi_intervallo(d1, d2):
@@ -546,7 +546,7 @@ def main():
     for a in nuovi:
         vecchio = archivio.get(a["id"], {})
         for k, v in vecchio.items():          # se oggi i dati sono meno ricchi, tengo quelli già salvati
-            if a.get(k) in ("", None, 0, []) and v not in ("", None, 0, []):
+            if k != "date_citate" and a.get(k) in ("", None, 0, []) and v not in ("", None, 0, []):
                 a[k] = v
         a["visto_la_prima_volta"] = vecchio.get("visto_la_prima_volta", oggi)
         if a["gruppo"] in GRUPPI_CON_DOCUMENTO and a.get("url") and a.get("documento_versione") != DOC_VERSIONE \
