@@ -10,6 +10,7 @@ Uso:
   python scripts/aggiorna_albo.py                 # scarica dal sito del Comune
   python scripts/aggiorna_albo.py --da-file x.csv  # usa un export CSV già scaricato
 """
+import base64
 import csv
 import http.cookiejar
 import io
@@ -22,6 +23,11 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from cifratura import chiave_da_ambiente, cifra_json, decifra_json
+
+try:
+    from pypdf import PdfReader
+except ImportError:                                      # senza pypdf si usano solo le date dell'oggetto
+    PdfReader = None
 
 BASE = "https://palestrina.trasparenza-valutazione-merito.it"
 # Pagina con l'elenco dell'albo (è quella caricata nel riquadro della pagina ufficiale).
@@ -162,9 +168,9 @@ def leggi_albo():
     in_elenco = len(righe_da_elenco(elenco))
     # L'elenco mostra 20 atti per pagina: se il CSV ne ha meno di una pagina piena, è incompleto.
     if righe and len(righe) >= in_elenco:
-        return righe, "csv"
+        return righe, "csv", opener
     print(f"Export CSV incompleto ({len(righe)} atti): leggo l'elenco pagina per pagina.")
-    return scarica_da_elenco(elenco, opener), "elenco"
+    return scarica_da_elenco(elenco, opener), "elenco", opener
 
 
 # ---------------------------------------------------------------- pulizia testi
@@ -291,6 +297,78 @@ def atto_da_riga(r):
     }
 
 
+# ---------------------------------------------------------------- date nel documento dell'atto
+# Molte ordinanze indicano i giorni di efficacia (lavori, manifestazioni) solo dentro il documento,
+# non nell'oggetto: per ordinanze, convocazioni e avvisi leggo il PDF una sola volta e ne ricavo le date.
+GRUPPI_CON_DOCUMENTO = ("ordinanza", "convocazione", "avviso")
+MAX_DOCUMENTI_PER_GIRO = 40
+RE_ATOB = re.compile(r"atob\((?:&#39;|')([A-Za-z0-9+/=]+)(?:&#39;|')\)")
+RE_DATA_DOC = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
+
+
+def date_dal_documento(testo, pubblicato_dal):
+    """Giorni di efficacia scritti nella parte dispositiva dell'atto (dopo ORDINA, prima di DISPONE/AVVERTE)."""
+    t = re.sub(r"[ \t ]+", " ", testo or "")
+    inizio = [m.end() for m in re.finditer(r"(?m)^\s*(?:ORDINA|DECRETA)\s*:?\s*$", t)]
+    if inizio:
+        t = t[inizio[-1]:]
+        fine = re.search(r"(?m)^\s*(?:DISPONE|AVVERTE|DEMANDA|INFORMA)\b", t)
+        if fine:
+            t = t[:fine.start()]
+    trovate = []
+    for m in RE_DATA_DOC.finditer(t):
+        g, me, a = (int(x) for x in m.groups())
+        try:
+            trovate.append((m.start(), m.end(), datetime(a, me, g)))
+        except ValueError:
+            pass
+    giorni, in_coppia = set(), set()
+    for k in range(len(trovate) - 1):
+        s1, e1, d1 = trovate[k]
+        s2, e2, d2 = trovate[k + 1]
+        prima, mezzo = t[max(0, s1 - 45):s1].lower(), t[e1:s2].lower()
+        if d1 <= d2 and len(mezzo) <= 80 and re.search(r"\bdal(?:le|l')?\b", prima) and re.search(r"\b(?:al|alle|fino al)\b", mezzo):
+            if (d2 - d1).days <= 31:
+                d = d1
+                while d <= d2:
+                    giorni.add(d)
+                    d += timedelta(days=1)
+            else:
+                giorni.update((d1, d2))
+            in_coppia.update((k, k + 1))
+    giorni.update(d for k, (_, _, d) in enumerate(trovate) if k not in in_coppia)
+    try:
+        pub = datetime.strptime(pubblicato_dal, "%Y-%m-%d")
+    except (TypeError, ValueError):
+        return sorted(d.strftime("%Y-%m-%d") for d in giorni)
+    return sorted(d.strftime("%Y-%m-%d") for d in giorni if pub - timedelta(days=1) <= d <= pub + timedelta(days=120))
+
+
+def url_documento(opener, url_atto):
+    """Indirizzo del documento principale (versione PDF non firmata) dalla pagina di dettaglio dell'atto."""
+    html = opener.open(url_atto, timeout=60).read().decode("utf-8", "replace")
+    for b64 in RE_ATOB.findall(html):
+        try:
+            u = base64.b64decode(b64).decode("utf-8", "replace")
+        except Exception:
+            continue
+        if "downloadAllegato" in u:
+            return u.replace("downloadSigned=true", "downloadSigned=false")
+    return None
+
+
+def testo_pdf(dati):
+    if PdfReader is None or not dati:
+        return ""
+    if not dati.startswith(b"%PDF"):                     # file firmato (.p7m): estraggo il PDF contenuto
+        i, j = dati.find(b"%PDF"), dati.rfind(b"%%EOF")
+        if i < 0 or j < i:
+            return ""
+        dati = dati[i:j + 5]
+    lettore = PdfReader(io.BytesIO(dati))
+    return "\n".join((p.extract_text() or "") for p in lettore.pages[:8])
+
+
 # ---------------------------------------------------------------- calendari .ics
 def ics_testo(s):
     return (s or "").replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
@@ -354,6 +432,7 @@ def scrivi_ics(atti, percorso, nome, solo=None):
 
 # ---------------------------------------------------------------- main
 def main():
+    opener = None
     if "--da-file" in sys.argv:
         f = Path(sys.argv[sys.argv.index("--da-file") + 1])
         testo = f.read_text(encoding="utf-8-sig")
@@ -362,7 +441,7 @@ def main():
         else:
             righe, metodo = [r for r in csv.DictReader(io.StringIO(testo)) if (r.get("Oggetto") or "").strip()], "csv"
     else:
-        righe, metodo = leggi_albo()
+        righe, metodo, opener = leggi_albo()
 
     nuovi = [atto_da_riga(r) for r in righe]
     if not nuovi:
@@ -378,12 +457,26 @@ def main():
     elif DATA_FILE.exists():                  # primo avvio: riprendo l'archivio in chiaro e poi lo elimino
         archivio = {a["id"]: a for a in json.loads(DATA_FILE.read_text(encoding="utf-8"))["atti"]}
     oggi = datetime.now(timezone(timedelta(hours=1))).strftime("%Y-%m-%d")
+    letti = 0
     for a in nuovi:
         vecchio = archivio.get(a["id"], {})
         for k, v in vecchio.items():          # se oggi i dati sono meno ricchi, tengo quelli già salvati
             if a.get(k) in ("", None, 0, []) and v not in ("", None, 0, []):
                 a[k] = v
         a["visto_la_prima_volta"] = vecchio.get("visto_la_prima_volta", oggi)
+        if a["gruppo"] in GRUPPI_CON_DOCUMENTO and a.get("url") and not a.get("documento_letto") \
+                and opener is not None and PdfReader is not None and letti < MAX_DOCUMENTI_PER_GIRO:
+            letti += 1
+            try:
+                u = url_documento(opener, a["url"])
+                testo = testo_pdf(opener.open(u, timeout=60).read()) if u else ""
+                a["date_documento"] = date_dal_documento(testo, a["pubblicato_dal"])
+                a["documento_letto"] = True
+            except Exception as e:                       # riprovo al giro successivo
+                print(f"Documento dell'atto {a['registro']} non letto: {e!r}")
+            time.sleep(1)
+        if a.get("date_documento"):
+            a["date_citate"] = sorted(set(a.get("date_citate") or []) | set(a["date_documento"]))
         archivio[a["id"]] = a
 
     atti = sorted(archivio.values(), key=lambda a: (a["pubblicato_dal"], a["registro"]), reverse=True)
@@ -403,7 +496,7 @@ def main():
     # nessun dato in chiaro sul sito
     for vecchio_file in (DATA_FILE, DOCS / "calendario.ics", DOCS / "calendario-ordinanze.ics"):
         vecchio_file.unlink(missing_ok=True)
-    print(f"OK ({metodo}): {len(nuovi)} atti letti oggi, {len(atti)} nell'archivio.")
+    print(f"OK ({metodo}): {len(nuovi)} atti letti oggi, {letti} documenti letti, {len(atti)} nell'archivio.")
 
 
 if __name__ == "__main__":
