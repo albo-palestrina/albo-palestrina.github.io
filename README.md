@@ -19,7 +19,7 @@ Con *Ricorda l'accesso su questo dispositivo* il browser resta collegato finché
 | `docs/index.html` | Il sito (accesso, calendario, pagina del giorno) |
 | `docs/data/atti.enc.json` | Gli atti letti dall'albo, cifrati. Si aggiorna da solo; i vecchi atti restano in archivio |
 | `docs/data/accesso.json` | Gli utenti abilitati (contiene solo dati cifrati, nessuna password) |
-| `scripts/aggiorna_albo.py` | Legge l'albo e rigenera i dati cifrati |
+| `scripts/aggiorna_albo.py` | Legge l'albo e rigenera i dati cifrati. Per ordinanze, convocazioni e avvisi apre anche il documento PDF (con OCR se è scansionato) e ricava i giorni di efficacia: date in cifre o a parole, intervalli "dal… al…" |
 | `scripts/cifratura.py` | Cifratura e gestione degli utenti |
 | `.github/workflows/aggiorna-albo.yml` | Aggiornamento automatico ogni ora dalle 6 alle 21 (salva solo quando ci sono novità) |
 
