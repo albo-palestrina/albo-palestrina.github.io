@@ -101,6 +101,36 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 .chip[aria-pressed="false"] { background: transparent; border-color: var(--line); color: var(--muted); }
 .chip[aria-pressed="false"] .sw { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
 .search { position: relative; flex: 1 1 220px; max-width: 340px; }
+
+/* filtro per tipo di atto: menu a tendina con tabella */
+.filtro { position: relative; }
+.filtro-btn { gap: 8px; }
+.filtro-btn b { font-weight: 700; }
+.filtro-btn .stack { display: inline-flex; padding-right: 3px; }
+.filtro-btn .stack i { width: 11px; height: 11px; border-radius: 3px; background: var(--c); margin-right: -3px; box-shadow: 0 0 0 1.5px var(--surface); }
+.filtro-btn .car { color: var(--muted); font-size: 11px; margin-left: 2px; }
+.filtro-menu {
+  position: absolute; z-index: 30; top: calc(100% + 6px); left: 0; width: min(380px, calc(100vw - 32px));
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px 8px;
+  box-shadow: 0 14px 34px rgb(0 0 0 / .16);
+}
+.filtro-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 10px; padding: 6px 6px 8px; border-bottom: 1px solid var(--line); }
+.filtro-head span:last-child { white-space: nowrap; margin-left: -6px; }
+.filtro-head span:first-child { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.filtro-head button { border: 0; background: none; color: var(--accent); font-weight: 600; font-size: 13px; cursor: pointer; padding: 2px 6px; border-radius: 4px; }
+.filtro-head button:hover { background: var(--surface-2); }
+.filtro-tab { width: 100%; border-collapse: collapse; margin-top: 2px; }
+.filtro-tab th { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 8px 6px 4px; }
+.filtro-tab th.n { text-align: right; }
+.filtro-tab td { padding: 0; border-top: 1px solid color-mix(in oklab, var(--line) 70%, transparent); }
+.filtro-tab tbody tr:hover td { background: var(--surface-2); }
+.filtro-tab label { display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 8px 6px; font-weight: 500; }
+.filtro-tab input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); flex: none; }
+.filtro-tab .sw { width: 12px; height: 12px; border-radius: 3px; background: var(--c); flex: none; }
+.filtro-tab td.n { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; padding: 8px 8px; width: 1%; white-space: nowrap; }
+.legenda { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.legenda i { display: inline-flex; align-items: center; gap: 6px; font-style: normal; }
+.legenda i b { width: 10px; height: 10px; border-radius: 3px; background: var(--c); }
 .search input {
   width: 100%; border: 1px solid var(--line); background: var(--surface); border-radius: var(--r);
   padding: 8px 12px;
@@ -206,7 +236,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
 
 @media print {
   body { background: #fff; color: #000; padding: 0; }
-  .nav, .tools, .note, .actions, .head, .foot #sub, .panel { display: none !important; }
+  .nav, .tools, .note, .legenda, .actions, .head, .foot #sub, .panel { display: none !important; }
   .card { break-inside: avoid; border-color: #999; }
   .card .obj, .facts dt { color: #333; }
 }
@@ -280,6 +310,7 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   let prog = new Map();     // giorno -> atti con un evento in programma
   let attivi = new Set(ORDINE);
   let cerca = "";
+  let menuAperto = false;  // menu dei tipi di atto aperto
   let mese = null;          // Date al primo del mese visualizzato
   let pronto = false;       // dati sbloccati e caricati
 
@@ -314,12 +345,35 @@ h1 .yr { color: var(--muted); font-weight: 500; }
   });
 
   /* ---------------- vista mese ---------------- */
-  function legenda() {
+  function contaTipi() {
     const conta = {};
     for (const a of DATA.atti) conta[a.gruppo] = (conta[a.gruppo] || 0) + 1;
-    return ORDINE.filter((g) => conta[g]).map((g) =>
-      `<button class="chip" style="--c:var(--c-${g})" data-g="${g}" aria-pressed="${attivi.has(g)}"><span class="sw"></span>${esc(nomeGruppo(g))} <span class="n">${conta[g]}</span></button>`
-    ).join("");
+    return conta;
+  }
+
+  function filtroHtml() {
+    const conta = contaTipi();
+    const tipi = ORDINE.filter((g) => conta[g]);
+    const scelti = tipi.filter((g) => attivi.has(g));
+    const stato = scelti.length === tipi.length ? "tutti" : scelti.length ? `${scelti.length} di ${tipi.length}` : "nessuno";
+    const righe = tipi.map((g) => `<tr><td><label><input type="checkbox" data-g="${g}"${attivi.has(g) ? " checked" : ""}>
+        <span class="sw" style="--c:var(--c-${g})"></span>${esc(nomeGruppo(g))}</label></td><td class="n">${conta[g]}</td></tr>`).join("");
+    return `<div class="filtro">
+      <button class="btn filtro-btn" id="filtro-btn" type="button" aria-haspopup="true" aria-controls="filtro-menu" aria-expanded="${menuAperto}">
+        <span class="stack" aria-hidden="true">${scelti.slice(0, 8).map((g) => `<i style="--c:var(--c-${g})"></i>`).join("")}</span>
+        Tipi di atto: <b>${stato}</b><span class="car" aria-hidden="true">▼</span></button>
+      <div class="filtro-menu" id="filtro-menu"${menuAperto ? "" : " hidden"}>
+        <div class="filtro-head"><span>Mostra nel calendario</span><span><button type="button" data-azione="tutti">Seleziona tutti</button><button type="button" data-azione="nessuno">Nessuno</button></span></div>
+        <table class="filtro-tab"><thead><tr><th>Tipo di atto</th><th class="n">Atti</th></tr></thead><tbody>${righe}</tbody></table>
+      </div>
+    </div>`;
+  }
+
+  function legendaHtml() {
+    const conta = contaTipi();
+    const tipi = ORDINE.filter((g) => conta[g] && attivi.has(g));
+    return tipi.length ? tipi.map((g) => `<i style="--c:var(--c-${g})"><b></b>${esc(nomeGruppo(g))}</i>`).join("")
+      : "<span>Nessun tipo di atto selezionato: aprire «Tipi di atto» per sceglierli.</span>";
   }
 
   function evHtml(a, inProgramma) {
@@ -393,9 +447,10 @@ h1 .yr { color: var(--muted); font-weight: 500; }
       <div style="display:grid;gap:14px">
         ${pannello()}
         <div class="tools">
-          <div class="legend" role="group" aria-label="Tipi di atto: tocca per mostrare o nascondere">${legenda()}</div>
+          ${filtroHtml()}
           <label class="search"><input id="q" type="search" placeholder="Cerca per via, ufficio, oggetto, n. registro…" value="${esc(cerca)}" aria-label="Cerca negli atti"></label>
         </div>
+        <div class="legenda" aria-label="Colori dei tipi di atto">${legendaHtml()}</div>
         <div class="note"><i><span class="k1"></span>Atto pubblicato in quella data</i><i><span class="k2"></span>Data di efficacia indicata nell'atto (lavori, chiusure, manifestazioni, sedute)</i><span>Selezionare un giorno per il dettaglio completo.</span></div>
         <div class="month" role="grid" aria-label="Calendario del mese">
           <div class="dow">${GIORNI.map((g) => `<div>${g}</div>`).join("")}</div>
@@ -408,11 +463,25 @@ h1 .yr { color: var(--muted); font-weight: 500; }
       if (el.classList.contains("empty")) return;
       location.hash = "giorno-" + el.dataset.k;
     }));
-    $("#view").querySelectorAll(".chip").forEach((el) => el.addEventListener("click", () => {
-      const g = el.dataset.g;
-      attivi.has(g) ? attivi.delete(g) : attivi.add(g);
+    const ridisegna = (fuoco) => {
       store.set("albo-filtri", JSON.stringify([...attivi]));
       vistaMese();
+      const el = fuoco && $(fuoco); if (el) el.focus();
+    };
+    $("#filtro-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      menuAperto = !menuAperto;
+      $("#filtro-menu").hidden = !menuAperto;
+      $("#filtro-btn").setAttribute("aria-expanded", menuAperto);
+    });
+    $("#filtro-menu").addEventListener("click", (e) => e.stopPropagation());
+    $("#filtro-menu").querySelectorAll("input[data-g]").forEach((el) => el.addEventListener("change", () => {
+      el.checked ? attivi.add(el.dataset.g) : attivi.delete(el.dataset.g);
+      ridisegna(`#filtro-menu input[data-g="${el.dataset.g}"]`);
+    }));
+    $("#filtro-menu").querySelectorAll("[data-azione]").forEach((el) => el.addEventListener("click", () => {
+      attivi = el.dataset.azione === "tutti" ? new Set(ORDINE) : new Set();
+      ridisegna(`#filtro-menu [data-azione="${el.dataset.azione}"]`);
     }));
     const q = $("#q");
     q.addEventListener("input", () => {
@@ -523,7 +592,16 @@ h1 .yr { color: var(--muted); font-weight: 500; }
     if (e.key === "ArrowLeft") vaiMese(-1);
     if (e.key === "ArrowRight") vaiMese(1);
   });
-  window.addEventListener("hashchange", route);
+  window.addEventListener("hashchange", () => { menuAperto = false; route(); });
+  const chiudiMenu = () => {
+    if (!menuAperto) return;
+    menuAperto = false;
+    const m = $("#filtro-menu"), b = $("#filtro-btn");
+    if (m) m.hidden = true;
+    if (b) b.setAttribute("aria-expanded", "false");
+  };
+  document.addEventListener("click", chiudiMenu);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menuAperto) { chiudiMenu(); $("#filtro-btn")?.focus(); } });
 
   function piedi() {
     const agg = DATA.aggiornato ? new Date(DATA.aggiornato) : null;
