@@ -16,7 +16,10 @@ import http.cookiejar
 import io
 import json
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
@@ -238,24 +241,9 @@ def iso(data_it):
         return ""
 
 
-def date_citate(oggetto):
-    """Date scritte nell'oggetto (es. 'DATA 4/11/2026', 'DAL 5/11/2026 AL 7/11/2026')."""
-    trovate = []
-    for g, m, a in RE_DATA.findall(oggetto or ""):
-        try:
-            trovate.append(datetime(int(a), int(m), int(g)))
-        except ValueError:
-            pass
-    giorni = set()
-    if len(trovate) == 2 and re.search(r"\bdal\b.*\bal\b", oggetto or "", re.I) and trovate[0] <= trovate[1] \
-            and (trovate[1] - trovate[0]).days <= 60:
-        d = trovate[0]
-        while d <= trovate[1]:
-            giorni.add(d.strftime("%Y-%m-%d"))
-            d += timedelta(days=1)
-    else:
-        giorni.update(d.strftime("%Y-%m-%d") for d in trovate)
-    return sorted(giorni)
+def date_citate(oggetto, pubblicato_dal=""):
+    """Date scritte nell'oggetto (es. 'DATA 4/11/2026', 'DAL 5/11/2026 AL 7/11/2026', '7 E 8 NOVEMBRE 2026')."""
+    return giorni_nel_testo(oggetto, pubblicato_dal, margine=1)
 
 
 def numero_euro(s):
@@ -291,8 +279,8 @@ def atto_da_riga(r):
         "pubblicato_al": iso(r.get("Data fine pubblicazione")),
         "allegati": int((r.get("Numero allegati") or "0").strip() or 0),
         "spesa": numero_euro(r.get("Spesa prevista")),
-        # Date di eventi citate nell'oggetto (lavori, chiusure, sedute): solo dove hanno senso
-        "date_citate": date_citate(oggetto) if g in ("ordinanza", "convocazione", "avviso") else [],
+        # Date di eventi citate nell'oggetto: per tutti i tipi di atto
+        "date_citate": date_citate(oggetto, iso(r.get("Data inizio pubblicazione"))),
         "url": url,
     }
 
@@ -300,48 +288,119 @@ def atto_da_riga(r):
 # ---------------------------------------------------------------- date nel documento dell'atto
 # Molte ordinanze indicano i giorni di efficacia (lavori, manifestazioni) solo dentro il documento,
 # non nell'oggetto: per ordinanze, convocazioni e avvisi leggo il PDF una sola volta e ne ricavo le date.
+# I documenti scansionati (solo immagine) vengono letti con il riconoscimento del testo (OCR).
 GRUPPI_CON_DOCUMENTO = ("ordinanza", "convocazione", "avviso")
 MAX_DOCUMENTI_PER_GIRO = 40
+DOC_VERSIONE = 3          # se cambia la logica di lettura, i documenti vengono riletti
 RE_ATOB = re.compile(r"atob\((?:&#39;|')([A-Za-z0-9+/=]+)(?:&#39;|')\)")
-RE_DATA_DOC = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
+MESI_IT = {m: i for i, m in enumerate(["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto",
+                                        "settembre", "ottobre", "novembre", "dicembre"], 1)}
+RE_DATA_NUM = re.compile(r"(?<![\d/.\-])(\d{1,2})[/.\-](\d{1,2})[/.\-](\d{4})(?![\d/])")
+RE_DATA_PAROLE = re.compile(
+    r"(?<!\d)(\d{1,2})(?:°|º)?((?:\s*(?:,|\be\b|\bed\b|\bal\b|-)\s*\d{1,2}(?:°|º)?)*)\s+(" + "|".join(MESI_IT)
+    + r")(?:\s+(?:del(?:l')?\s*)?(\d{4}))?\b", re.I)
+# date di riferimenti ad altri atti, protocolli, firme: non sono giorni di efficacia
+RE_RIFERIMENTO = re.compile(
+    r"((?:\bn\.|n°|\bprot|\bnota|\bordinanz|\bdecret|\bdeliber|\bdetermin|\blegge|\bd\.\s?lgs|\bcircolare|\bistanza"
+    r"|\brichiest|\bpervenut|\bregistro|\bsentenz|\bverbale|\bfattura|\bpec\b)[^;:\n]{0,40}\b(?:del|in data|dd\.?)\s*$)"
+    r"|((?:palestrina|\bl[iì]|roma)\s*,?\s*(?:il\s*|lì\s*)?$)", re.I)
+MAX_GIORNI_INTERVALLO = 92
 
 
-def date_dal_documento(testo, pubblicato_dal):
-    """Giorni di efficacia scritti nella parte dispositiva dell'atto (dopo ORDINA, prima di DISPONE/AVVERTE)."""
-    t = re.sub(r"[ \t ]+", " ", testo or "")
-    inizio = [m.end() for m in re.finditer(r"(?m)^\s*(?:ORDINA|DECRETA)\s*:?\s*$", t)]
-    if inizio:
-        t = t[inizio[-1]:]
-        fine = re.search(r"(?m)^\s*(?:DISPONE|AVVERTE|DEMANDA|INFORMA)\b", t)
-        if fine:
-            t = t[:fine.start()]
+def _data(g, m, a):
+    try:
+        return datetime(int(a), int(m), int(g))
+    except (TypeError, ValueError):
+        return None
+
+
+def _date_trovate(t, anno_rif):
+    """Tutte le date del testo come (inizio, fine, [giorni], intervallo?) in ordine di posizione."""
     trovate = []
-    for m in RE_DATA_DOC.finditer(t):
-        g, me, a = (int(x) for x in m.groups())
-        try:
-            trovate.append((m.start(), m.end(), datetime(a, me, g)))
-        except ValueError:
-            pass
-    giorni, in_coppia = set(), set()
-    for k in range(len(trovate) - 1):
-        s1, e1, d1 = trovate[k]
-        s2, e2, d2 = trovate[k + 1]
-        prima, mezzo = t[max(0, s1 - 45):s1].lower(), t[e1:s2].lower()
-        if d1 <= d2 and len(mezzo) <= 80 and re.search(r"\bdal(?:le|l')?\b", prima) and re.search(r"\b(?:al|alle|fino al)\b", mezzo):
-            if (d2 - d1).days <= 31:
-                d = d1
-                while d <= d2:
-                    giorni.add(d)
-                    d += timedelta(days=1)
+    for m in RE_DATA_NUM.finditer(t):
+        d = _data(*m.groups())
+        if d:
+            trovate.append([m.start(), m.end(), [d], False])
+    for m in RE_DATA_PAROLE.finditer(t):
+        mese = MESI_IT[m.group(3).lower()]
+        anno = int(m.group(4)) if m.group(4) else None
+        numeri = [int(m.group(1))] + [int(x) for x in re.findall(r"\d{1,2}", m.group(2) or "")]
+        intervallo = bool(re.search(r"\bal\b|-", m.group(2) or "", re.I)) and len(numeri) == 2
+        trovate.append([m.start(), m.end(), [(n, mese, anno) for n in numeri], intervallo])
+    trovate.sort(key=lambda x: x[0])
+    # anni mancanti ("dal 7 novembre al 3 dicembre 2026"): uso l'anno della data successiva o quello di riferimento
+    prossimo_anno = anno_rif
+    for voce in reversed(trovate):
+        giorni = []
+        for g in voce[2]:
+            if isinstance(g, tuple):
+                n, mese, anno = g
+                d = _data(n, mese, anno or prossimo_anno)
+                if d:
+                    giorni.append(d)
             else:
-                giorni.update((d1, d2))
-            in_coppia.update((k, k + 1))
-    giorni.update(d for k, (_, _, d) in enumerate(trovate) if k not in in_coppia)
+                giorni.append(g)
+        voce[2] = giorni
+        if giorni:
+            prossimo_anno = giorni[0].year
+    return [v for v in trovate if v[2]]
+
+
+def giorni_nel_testo(testo, pubblicato_dal, margine=0, escludi_riferimenti=True):
+    """Giorni (AAAA-MM-GG) citati nel testo come date di efficacia, entro un anno dalla pubblicazione."""
+    t = re.sub(r"[ \t ]+", " ", testo or "")
     try:
         pub = datetime.strptime(pubblicato_dal, "%Y-%m-%d")
     except (TypeError, ValueError):
-        return sorted(d.strftime("%Y-%m-%d") for d in giorni)
-    return sorted(d.strftime("%Y-%m-%d") for d in giorni if pub - timedelta(days=1) <= d <= pub + timedelta(days=120))
+        pub = None
+    trovate = _date_trovate(t, pub.year if pub else datetime.now().year)
+    if escludi_riferimenti:
+        trovate = [v for v in trovate if not RE_RIFERIMENTO.search(t[max(0, v[0] - 60):v[0]])]
+    giorni, in_coppia = set(), set()
+
+    def aggiungi_intervallo(d1, d2):
+        if (d2 - d1).days <= MAX_GIORNI_INTERVALLO:
+            d = d1
+            while d <= d2:
+                giorni.add(d)
+                d += timedelta(days=1)
+        else:
+            giorni.update((d1, d2))
+
+    for k in range(len(trovate) - 1):
+        s1, e1, g1, _ = trovate[k]
+        s2, e2, g2, _ = trovate[k + 1]
+        if len(g1) != 1 or len(g2) != 1:
+            continue
+        prima, mezzo = t[max(0, s1 - 45):s1].lower(), t[e1:s2].lower()
+        if g1[0] <= g2[0] and len(mezzo) <= 80 and re.search(r"\b(?:dal|dalle|dall'|a partire dal|da)\b", prima) \
+                and re.search(r"\b(?:al|alle|fino al|sino al|a tutto il)\b", mezzo):
+            aggiungi_intervallo(g1[0], g2[0])
+            in_coppia.update((k, k + 1))
+    for k, (_, _, g, intervallo) in enumerate(trovate):
+        if k in in_coppia:
+            continue
+        if intervallo and len(g) == 2 and g[0] <= g[1]:
+            aggiungi_intervallo(g[0], g[1])
+        else:
+            giorni.update(g)
+    if pub:
+        giorni = {d for d in giorni if pub - timedelta(days=margine) <= d <= pub + timedelta(days=365)}
+    return sorted(d.strftime("%Y-%m-%d") for d in giorni)
+
+
+def date_dal_documento(testo, pubblicato_dal):
+    """Giorni di efficacia scritti nell'atto: nella parte dispositiva (ORDINA/DECRETA ... DISPONE/AVVERTE)
+    se c'è, altrimenti in tutto il testo (convocazioni, avvisi)."""
+    t = testo or ""
+    inizio = [m.end() for m in re.finditer(r"(?m)^\s*(?:O\s?R\s?D\s?I\s?N\s?A|D\s?E\s?C\s?R\s?E\s?T\s?A)\s*:?\s*$", t)]
+    if inizio:
+        sezione = t[inizio[-1]:]
+        fine = re.search(r"(?m)^\s*(?:DISPONE|AVVERTE|DEMANDA|INFORMA|MANDA)\b", sezione)
+        if fine:
+            sezione = sezione[:fine.start()]
+        return giorni_nel_testo(sezione, pubblicato_dal, margine=1)
+    return giorni_nel_testo(t, pubblicato_dal, margine=0)
 
 
 def url_documento(opener, url_atto):
@@ -357,16 +416,40 @@ def url_documento(opener, url_atto):
     return None
 
 
+def ocr_pdf(dati, pagine=3):
+    """Testo di un PDF scansionato, con tesseract (lingua italiana). Vuoto se gli strumenti non ci sono."""
+    if not (shutil.which("pdftoppm") and shutil.which("tesseract")):
+        return ""
+    with tempfile.TemporaryDirectory() as cartella:
+        pdf = Path(cartella) / "atto.pdf"
+        pdf.write_bytes(dati)
+        subprocess.run(["pdftoppm", "-r", "300", "-gray", "-png", "-l", str(pagine), str(pdf), str(Path(cartella) / "p")],
+                       check=True, capture_output=True, timeout=180)
+        testi = []
+        for immagine in sorted(Path(cartella).glob("p*.png")):
+            r = subprocess.run(["tesseract", str(immagine), "-", "-l", "ita"], capture_output=True, text=True, timeout=180)
+            testi.append(r.stdout)
+        return "\n".join(testi)
+
+
 def testo_pdf(dati):
-    if PdfReader is None or not dati:
+    if not dati:
         return ""
     if not dati.startswith(b"%PDF"):                     # file firmato (.p7m): estraggo il PDF contenuto
         i, j = dati.find(b"%PDF"), dati.rfind(b"%%EOF")
         if i < 0 or j < i:
             return ""
         dati = dati[i:j + 5]
-    lettore = PdfReader(io.BytesIO(dati))
-    return "\n".join((p.extract_text() or "") for p in lettore.pages[:8])
+    testo = ""
+    if PdfReader is not None:
+        try:
+            lettore = PdfReader(io.BytesIO(dati))
+            testo = "\n".join((p.extract_text() or "") for p in lettore.pages[:8])
+        except Exception:
+            testo = ""
+    if len(re.sub(r"\s", "", testo)) < 40:              # documento scansionato: provo l'OCR
+        testo = ocr_pdf(dati)
+    return testo
 
 
 # ---------------------------------------------------------------- calendari .ics
@@ -464,14 +547,15 @@ def main():
             if a.get(k) in ("", None, 0, []) and v not in ("", None, 0, []):
                 a[k] = v
         a["visto_la_prima_volta"] = vecchio.get("visto_la_prima_volta", oggi)
-        if a["gruppo"] in GRUPPI_CON_DOCUMENTO and a.get("url") and not a.get("documento_letto") \
-                and opener is not None and PdfReader is not None and letti < MAX_DOCUMENTI_PER_GIRO:
+        if a["gruppo"] in GRUPPI_CON_DOCUMENTO and a.get("url") and a.get("documento_versione") != DOC_VERSIONE \
+                and opener is not None and letti < MAX_DOCUMENTI_PER_GIRO:
             letti += 1
             try:
                 u = url_documento(opener, a["url"])
                 testo = testo_pdf(opener.open(u, timeout=60).read()) if u else ""
                 a["date_documento"] = date_dal_documento(testo, a["pubblicato_dal"])
                 a["documento_letto"] = True
+                a["documento_versione"] = DOC_VERSIONE
             except Exception as e:                       # riprovo al giro successivo
                 print(f"Documento dell'atto {a['registro']} non letto: {e!r}")
             time.sleep(1)
