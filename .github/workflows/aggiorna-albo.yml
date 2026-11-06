@@ -16,7 +16,7 @@ concurrency:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
 
@@ -25,11 +25,8 @@ jobs:
           python-version: "3.12"
 
       - name: Prepara l'ambiente
-        run: |
-          python -m pip install --quiet cryptography pypdf
-          # lettura dei documenti scansionati (OCR in italiano)
-          sudo apt-get update -qq > /dev/null
-          sudo apt-get install -y -qq --no-install-recommends tesseract-ocr tesseract-ocr-ita poppler-utils > /dev/null
+        # tesseract (OCR dei documenti scansionati) viene installato dallo script solo quando serve
+        run: python -m pip install --quiet cryptography pypdf
 
       - name: Scarica l'albo e rigenera i dati cifrati
         env:
