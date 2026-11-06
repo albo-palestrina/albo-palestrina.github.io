@@ -371,8 +371,10 @@ def main():
     chiave = chiave_da_ambiente()
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     archivio = {}
+    precedenti = None
     if DATA_CIFRATI.exists():
-        archivio = {a["id"]: a for a in decifra_json(json.loads(DATA_CIFRATI.read_text(encoding="utf-8")), chiave)["atti"]}
+        precedenti = decifra_json(json.loads(DATA_CIFRATI.read_text(encoding="utf-8")), chiave)["atti"]
+        archivio = {a["id"]: a for a in precedenti}
     elif DATA_FILE.exists():                  # primo avvio: riprendo l'archivio in chiaro e poi lo elimino
         archivio = {a["id"]: a for a in json.loads(DATA_FILE.read_text(encoding="utf-8"))["atti"]}
     oggi = datetime.now(timezone(timedelta(hours=1))).strftime("%Y-%m-%d")
@@ -385,6 +387,12 @@ def main():
         archivio[a["id"]] = a
 
     atti = sorted(archivio.values(), key=lambda a: (a["pubblicato_dal"], a["registro"]), reverse=True)
+    # Se dall'ultimo controllo non è cambiato nulla, non riscrivo il file (niente commit inutili).
+    if precedenti is not None:
+        firma = lambda lista: json.dumps(sorted(lista, key=lambda a: a["id"]), sort_keys=True, ensure_ascii=False)
+        if firma(atti) == firma(precedenti):
+            print(f"Nessuna novità ({metodo}): {len(nuovi)} atti letti oggi, {len(atti)} nell'archivio.")
+            return
     aggiornato = datetime.now(timezone.utc).isoformat(timespec="minutes")
     DATA_CIFRATI.write_text(json.dumps(cifra_json({
         "aggiornato": aggiornato,
