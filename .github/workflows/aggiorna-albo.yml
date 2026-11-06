@@ -2,8 +2,8 @@ name: Aggiorna albo pretorio
 
 on:
   schedule:
-    # tre volte al giorno (orari UTC: in Italia circa 7, 13 e 19)
-    - cron: "17 5,11,17 * * *"
+    # ogni ora dalle 6 alle 21 ora italiana (orari UTC; con l'ora legale tutto slitta di un'ora)
+    - cron: "7 5-20 * * *"
   workflow_dispatch:
 
 permissions:
