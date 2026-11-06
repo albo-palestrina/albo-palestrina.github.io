@@ -21,7 +21,7 @@ Con *Ricorda l'accesso su questo dispositivo* il browser resta collegato finché
 | `docs/data/accesso.json` | Gli utenti abilitati (contiene solo dati cifrati, nessuna password) |
 | `scripts/aggiorna_albo.py` | Legge l'albo e rigenera i dati cifrati |
 | `scripts/cifratura.py` | Cifratura e gestione degli utenti |
-| `.github/workflows/aggiorna-albo.yml` | Aggiornamento automatico verso le 7, le 13 e le 19 |
+| `.github/workflows/aggiorna-albo.yml` | Aggiornamento automatico ogni ora dalle 6 alle 21 (salva solo quando ci sono novità) |
 
 La chiave di cifratura è salvata nel segreto del repository **ALBO_CHIAVE** (*Settings → Secrets and variables → Actions*). Non va mai scritta nei file del repository. Se si perde, si genera una chiave nuova e si ricreano gli utenti.
 
