@@ -580,6 +580,9 @@ def main():
             a["date_citate"] = sorted(set(a.get("date_citate") or []) | set(a["date_documento"]))
         archivio[a["id"]] = a
 
+    for a in archivio.values():               # stesse regole per tutto l'archivio, anche per gli atti già usciti dall'albo
+        a["date_citate"] = sorted(set(date_citate(a.get("oggetto", ""), a.get("pubblicato_dal", "")))
+                                  | set(a.get("date_documento") or []))
     atti = sorted(archivio.values(), key=lambda a: (a["pubblicato_dal"], a["registro"]), reverse=True)
     # Se dall'ultimo controllo non è cambiato nulla, non riscrivo il file (niente commit inutili).
     if precedenti is not None:
