@@ -50,6 +50,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 DATA_FILE = DOCS / "data" / "atti.json"
 DATA_CIFRATI = DOCS / "data" / "atti.enc.json"
+# Tentativi falliti di fila per sito del Comune irraggiungibile (file fuori da docs: non va sul sito)
+STATO_DOWNLOAD = ROOT / "stato" / "download-falliti.txt"
+SOGLIA_AVVISO = 12          # dopo 12 giri falliti di fila (circa mezza giornata) il workflow segnala errore
 
 # Gruppi di colore (stesse chiavi usate dal sito)
 GRUPPI = [
@@ -530,6 +533,22 @@ def scrivi_ics(atti, percorso, nome, solo=None):
     percorso.write_text("".join(ics_riga(r) for r in righe), encoding="utf-8")
 
 
+# ---------------------------------------------------------------- sito irraggiungibile
+def sito_irraggiungibile(errore):
+    """Un giro saltato non è un errore: si riprova al giro successivo con i dati già pubblicati.
+    Il workflow fallisce (e GitHub manda l'email) solo dopo SOGLIA_AVVISO giri falliti di fila."""
+    try:
+        falliti = int(STATO_DOWNLOAD.read_text(encoding="utf-8").strip() or 0) + 1
+    except (FileNotFoundError, ValueError):
+        falliti = 1
+    STATO_DOWNLOAD.parent.mkdir(parents=True, exist_ok=True)
+    STATO_DOWNLOAD.write_text(f"{falliti}\n", encoding="utf-8")
+    messaggio = f"Sito del Comune non raggiungibile ({falliti} giri falliti di fila): {errore}"
+    if falliti >= SOGLIA_AVVISO:
+        sys.exit(messaggio)
+    print(f"::warning::{messaggio}. Riprovo al prossimo giro.")
+
+
 # ---------------------------------------------------------------- main
 def main():
     opener = None
@@ -541,7 +560,13 @@ def main():
         else:
             righe, metodo = [r for r in csv.DictReader(io.StringIO(testo)) if (r.get("Oggetto") or "").strip()], "csv"
     else:
-        righe, metodo, opener = leggi_albo()
+        try:
+            righe, metodo, opener = leggi_albo()
+        except (RuntimeError, OSError) as e:      # sito del Comune lento o irraggiungibile
+            sito_irraggiungibile(e)
+            return
+        if STATO_DOWNLOAD.exists():
+            STATO_DOWNLOAD.unlink()
 
     nuovi = [atto_da_riga(r) for r in righe]
     if not nuovi:
